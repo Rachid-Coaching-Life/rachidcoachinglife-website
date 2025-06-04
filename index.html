@@ -11,19 +11,16 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
         }
-        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
         /* Navigation */
         nav {
             background: white;
@@ -33,14 +30,12 @@
             width: 100%;
             z-index: 1000;
         }
-        
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 70px;
         }
-        
         .logo {
             display: flex;
             align-items: center;
@@ -48,31 +43,26 @@
             font-weight: bold;
             color: #14b8a6;
         }
-        
         .logo img {
             width: 50px;
             height: 50px;
             margin-right: 15px;
             border-radius: 50%;
         }
-        
         .nav-links {
             display: flex;
             list-style: none;
             gap: 30px;
         }
-        
         .nav-links a {
             text-decoration: none;
             color: #333;
             font-weight: 500;
             transition: color 0.3s;
         }
-        
         .nav-links a:hover {
             color: #14b8a6;
         }
-        
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #06b6d4, #14b8a6, #10b981);
@@ -80,17 +70,14 @@
             padding: 120px 0 80px;
             text-align: center;
         }
-        
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
             font-weight: 700;
         }
-        
         .hero .highlight {
             color: #fbbf24;
         }
-        
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 40px;
@@ -98,14 +85,12 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
         .cta-buttons {
             display: flex;
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
         .btn {
             padding: 15px 30px;
             border: none;
@@ -117,34 +102,28 @@
             display: inline-block;
             transition: all 0.3s;
         }
-        
         .btn-primary {
             background: white;
             color: #14b8a6;
         }
-        
         .btn-primary:hover {
             background: #f0f9ff;
             transform: translateY(-2px);
         }
-        
         .btn-outline {
             background: transparent;
             color: white;
             border: 2px solid white;
         }
-        
         .btn-outline:hover {
             background: white;
             color: #14b8a6;
         }
-        
         /* Hero Logo */
         .hero-logo { 
             margin-top: 40px; 
             text-align: center; 
         }
-        
         .hero-logo img { 
             width: 120px; 
             height: 120px; 
@@ -153,11 +132,9 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
             transition: transform 0.3s ease; 
         }
-        
         .hero-logo img:hover { 
             transform: scale(1.05); 
         }
-        
         /* Gratuit Banner */
         .gratuit-banner {
             background: linear-gradient(45deg, #fbbf24, #facc15, #84cc16);
@@ -166,37 +143,31 @@
             font-weight: bold;
             color: #000;
         }
-        
         /* Services */
         .services {
             padding: 80px 0;
             background: #f8fafc;
         }
-        
         .section-title {
             text-align: center;
             margin-bottom: 60px;
         }
-        
         .section-title h2 {
             font-size: 2.5rem;
             color: #1f2937;
             margin-bottom: 15px;
         }
-        
         .title-underline {
             width: 80px;
             height: 4px;
             background: #14b8a6;
             margin: 0 auto 20px;
         }
-        
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-        
         .service-card {
             background: white;
             padding: 40px;
@@ -204,12 +175,10 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
-        
         .service-icon {
             width: 60px;
             height: 60px;
@@ -222,61 +191,51 @@
             font-size: 24px;
             color: #14b8a6;
         }
-        
         .service-card h3 {
             font-size: 1.5rem;
             color: #1f2937;
             margin-bottom: 15px;
         }
-        
         .service-card p {
             color: #6b7280;
             margin-bottom: 20px;
         }
-        
         .service-features {
             list-style: none;
         }
-        
         .service-features li {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
             color: #374151;
         }
-        
         .service-features li::before {
             content: "✓";
             color: #14b8a6;
             font-weight: bold;
             margin-right: 10px;
         }
-        
         /* About */
         .about {
             padding: 80px 0;
             background: white;
         }
-        
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
         }
-        
         .about-text h2 {
             font-size: 2.5rem;
             color: #1f2937;
             margin-bottom: 20px;
         }
-        
         .about-text p {
             color: #6b7280;
             margin-bottom: 20px;
             font-size: 1.1rem;
         }
-        
         .quote {
             background: #f0fdfa;
             padding: 30px;
@@ -286,13 +245,11 @@
             font-style: italic;
             color: #065f46;
         }
-        
         .social-links {
             display: flex;
             gap: 15px;
             margin-top: 30px;
         }
-        
         .social-btn {
             padding: 10px 20px;
             border-radius: 25px;
@@ -303,31 +260,25 @@
             align-items: center;
             gap: 8px;
         }
-        
         .social-btn.instagram {
             background: linear-gradient(45deg, #f56565, #ed64a6);
         }
-        
         .social-btn.facebook {
             background: #3b82f6;
         }
-        
         .social-btn.tiktok {
             background: #000;
         }
-        
         /* Testimonials */
         .testimonials {
             padding: 80px 0;
             background: #f8fafc;
         }
-        
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-        
         .testimonial-card {
             background: white;
             padding: 30px;
@@ -335,83 +286,68 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
         }
-        
         .testimonial-avatar {
             width: 80px;
             height: 80px;
             border-radius: 50%;
             margin: 0 auto 20px;
         }
-        
         .testimonial-card h4 {
             color: #1f2937;
             margin-bottom: 5px;
         }
-        
         .testimonial-role {
             color: #14b8a6;
             margin-bottom: 20px;
         }
-        
         .testimonial-text {
             color: #6b7280;
             font-style: italic;
         }
-        
         /* Contact */
         .contact {
             padding: 80px 0;
             background: white;
         }
-        
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
         }
-        
         .contact-info h4 {
             color: #1f2937;
             margin-bottom: 20px;
             font-size: 1.3rem;
         }
-        
         .contact-item {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
             color: #6b7280;
         }
-        
         .contact-item::before {
             content: "📞";
             margin-right: 10px;
         }
-        
         .contact-item.email::before {
             content: "📧";
         }
-        
         .contact-item.calendar::before {
             content: "📅";
         }
-        
         .contact-item a {
             color: #14b8a6;
             text-decoration: none;
             font-weight: 600;
         }
-        
         .contact-form {
             background: #f8fafc;
             padding: 40px;
             border-radius: 15px;
         }
-        
         .form-group {
             margin-bottom: 20px;
         }
-        
         .form-group input,
         .form-group select,
         .form-group textarea {
@@ -421,83 +357,65 @@
             border-radius: 8px;
             font-size: 16px;
         }
-        
         .form-group textarea {
             resize: vertical;
             height: 120px;
         }
-        
         /* Footer */
         footer {
             background: #1f2937;
             color: white;
             padding: 60px 0 30px;
         }
-        
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
             margin-bottom: 40px;
         }
-        
         .footer-section h4 {
             margin-bottom: 20px;
             color: #14b8a6;
         }
-        
         .footer-section ul {
             list-style: none;
         }
-        
         .footer-section ul li {
             margin-bottom: 10px;
         }
-        
         .footer-section ul li a {
             color: #d1d5db;
             text-decoration: none;
         }
-        
         .footer-section ul li a:hover {
             color: white;
         }
-        
         .footer-bottom {
             border-top: 1px solid #374151;
             padding-top: 30px;
             text-align: center;
             color: #9ca3af;
         }
-        
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-            
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
             .about-content {
                 grid-template-columns: 1fr;
             }
-            
             .contact-content {
                 grid-template-columns: 1fr;
             }
-            
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
         }
     </style>
-    <head>
-  <meta charset="UTF-8">
-  <title>Rachid Coaching Life</title>
-  <link rel="stylesheet" href="CSS/style.css"> <!-- Lien vers le CSS -->
 </head>
 <body>
     <!-- Navigation -->
@@ -505,7 +423,7 @@
         <div class="container">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="logo.png" alt="Rachid Coaching">
+                    <img src="images/logo.png" alt="Rachid Coaching">
                     Rachid Coaching Life
                 </div>
                 <ul class="nav-links">
@@ -518,7 +436,6 @@
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section id="accueil" class="hero">
         <div class="container">
@@ -529,16 +446,14 @@
                 <a href="#services" class="btn btn-outline">Découvrir les services</a>
             </div>
             <div class="hero-logo">
-                <img src="images/logo.png" class="logo" alt="Logo">
+                <img src="images/logo.png" alt="Logo">
             </div>
         </div>
     </section>
-
     <!-- Gratuit Banner -->
     <div class="gratuit-banner">
         🎁 TOUS NOS SERVICES SONT 100% GRATUITS - AUCUN ABONNEMENT NI PRESTATION PAYANTE
     </div>
-
     <!-- Services -->
     <section id="services" class="services">
         <div class="container">
@@ -547,10 +462,9 @@
                 <div class="title-underline"></div>
                 <p>Découvrez comment Rachid peut vous aider à transformer votre vie sans aucun coût.</p>
             </div>
-            
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon"><img src="service-brain.png" alt="Développement Personnel" style="width: 30px; height: 30px;"></div>
+                    <div class="service-icon"><img src="images/service-brain.png" alt="Développement Personnel" style="width: 30px; height: 30px;"></div>
                     <h3>Développement Personnel</h3>
                     <p>Apprenez à mieux vous connaître, à gérer vos émotions et à développer une confiance en soi inébranlable.</p>
                     <ul class="service-features">
@@ -559,9 +473,8 @@
                         <li>Équilibre vie pro/perso</li>
                     </ul>
                 </div>
-                
                 <div class="service-card">
-                    <div class="service-icon"><img src="service-briefcase.png" alt="Coaching Professionnel" style="width: 30px; height: 30px;"></div>
+                    <div class="service-icon"><img src="images/service-briefcase.png" alt="Coaching Professionnel" style="width: 30px; height: 30px;"></div>
                     <h3>Coaching Professionnel</h3>
                     <p>Boostez votre carrière, améliorez vos compétences en leadership et atteignez vos objectifs professionnels.</p>
                     <ul class="service-features">
@@ -570,9 +483,8 @@
                         <li>Compétences en leadership</li>
                     </ul>
                 </div>
-                
                 <div class="service-card">
-                    <div class="service-icon"><img src="service-heart.png" alt="Relations & Bien-être" style="width: 30px; height: 30px;"></div>
+                    <div class="service-icon"><img src="images/service-heart.png" alt="Relations & Bien-être" style="width: 30px; height: 30px;"></div>
                     <h3>Relations & Bien-être</h3>
                     <p>Améliorez vos relations personnelles et développez une mentalité positive pour une vie plus épanouie.</p>
                     <ul class="service-features">
@@ -584,7 +496,6 @@
             </div>
         </div>
     </section>
-
     <!-- About -->
     <section id="apropos" class="about">
         <div class="container">
@@ -592,29 +503,23 @@
                 <div class="about-text">
                     <h2>Qui est Rachid ?</h2>
                     <div class="title-underline" style="margin: 0 0 30px 0;"></div>
-                    
                     <p>Je suis une personne modeste et terre-à-terre, animée par une passion profonde : aider les gens et les guider vers la bonne voie. Cela me peine de voir des individus errer dans l'ignorance, inconscients de leur véritable potentiel.</p>
-                    
                     <p>Je trouve un grand plaisir à partager la lumière et le savoir, car nous avons tous été dotés de capacités extraordinaires, mais beaucoup ne parviennent pas à les exploiter pleinement. C'est pourquoi j'ai créé ce site web et que je me consacre activement aux réseaux sociaux, partageant sans relâche cette lumière - toujours gratuitement.</p>
-                    
                     <div class="quote">
                         "Mon unique but est d'illuminer les cœurs égarés. Nous possédons tous un superpuissance secrète : le pouvoir de dire NON, le pouvoir de prendre des décisions et la force de persévérer. Avec altruisme, je me consacre à libérer la lumière cachée en chacun de nous."
                     </div>
-                    
                     <div class="social-links">
-                        <a href="https://instagram.com/rachid_coaching_life" class="social-btn instagram"><img src="instagram-icon.png" alt="Instagram" style="width: 20px; height: 20px; margin-right: 8px;"> Instagram</a>
-                        <a href="https://www.facebook.com/rachid.coachinglife/" class="social-btn facebook"><img src="facebook-icon.png" alt="Facebook" style="width: 20px; height: 20px; margin-right: 8px;"> Facebook</a>
-                        <a href="https://tiktok.com/@rachid_coaching_life" class="social-btn tiktok"><img src="tiktok-icon.png" alt="TikTok" style="width: 20px; height: 20px; margin-right: 8px;"> TikTok</a>
+                        <a href="https://instagram.com/rachid_coaching_life"  class="social-btn instagram"><img src="images/icons/icône-instagram.png" alt="Instagram" style="width: 20px; height: 20px; margin-right: 8px;"> Instagram</a>
+                        <a href="https://www.facebook.com/rachid.coachinglife/"  class="social-btn facebook"><img src="images/icons/icône-facebook.png" alt="Facebook" style="width: 20px; height: 20px; margin-right: 8px;"> Facebook</a>
+                        <a href="https://tiktok.com/@rachid_coaching_life"  class="social-btn tiktok"><img src="images/icons/icône-tiktok.png" alt="TikTok" style="width: 20px; height: 20px; margin-right: 8px;"> TikTok</a>
                     </div>
                 </div>
-                
                 <div>
                     <img src="images/salon-de-coaching.png" alt="Coaching" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Testimonials -->
     <section id="temoignages" class="testimonials">
         <div class="container">
@@ -623,24 +528,21 @@
                 <div class="title-underline"></div>
                 <p>Découvrez ce que disent ceux qui ont bénéficié du coaching gratuit de Rachid.</p>
             </div>
-            
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="testimonial-avatar">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg"  alt="Sarah" class="testimonial-avatar">
                     <h4>Sarah</h4>
                     <p class="testimonial-role">Entrepreneuse</p>
                     <p class="testimonial-text">"Grâce aux conseils de Rachid, j'ai pu surmonter ma peur de l'échec et lancer mon entreprise. Son coaching gratuit a changé ma vie professionnelle."</p>
                 </div>
-                
                 <div class="testimonial-card">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Karim" class="testimonial-avatar">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg"  alt="Karim" class="testimonial-avatar">
                     <h4>Karim</h4>
                     <p class="testimonial-role">Étudiant</p>
                     <p class="testimonial-text">"Je n'avais pas les moyens de payer un coach. Rachid m'a offert son aide gratuitement et m'a aidé à trouver ma voie professionnelle. Merci infiniment !"</p>
                 </div>
-                
                 <div class="testimonial-card">
-                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amina" class="testimonial-avatar">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg"  alt="Amina" class="testimonial-avatar">
                     <h4>Amina</h4>
                     <p class="testimonial-role">Mère au foyer</p>
                     <p class="testimonial-text">"Après 10 ans à m'occuper de mes enfants, j'avais perdu confiance en moi. Les sessions avec Rachid m'ont redonné une estime de moi et des projets pour l'avenir."</p>
@@ -648,7 +550,6 @@
             </div>
         </div>
     </section>
-
     <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
@@ -657,28 +558,25 @@
                 <div class="title-underline"></div>
                 <p>Prêt à transformer votre vie ? Envoyez-nous un message et nous vous répondrons rapidement pour discuter de vos besoins.</p>
             </div>
-            
             <div class="contact-content">
                 <div class="contact-info">
                     <h4>Réservez votre session</h4>
                     <div class="contact-item calendar">
-                        <a href="https://calendly.com/rachid-coaching-life">calendly.com/rachid-coaching-life</a>
+                        <a href="https://calendly.com/rachid-coaching-life">calendly.com/rachid-coaching-life</a> 
                     </div>
                     <div class="contact-item">
-                        <a href="https://wa.me/33659525636">+33 6 59 52 56 36</a>
+                        <a href="https://wa.me/33659525636">+33  6 59 52 56 36</a>
                     </div>
                     <div class="contact-item email">
                         <a href="mailto:rachidcoachinglife@outlook.com">rachidcoachinglife@outlook.com</a>
                     </div>
-                    
                     <h4 style="margin-top: 40px;">Réseaux sociaux</h4>
                     <div class="social-links">
-                        <a href="https://instagram.com/rachid_coaching_life" class="social-btn instagram"><img src="instagram-icon.png" alt="Instagram" style="width: 24px; height: 24px;"></a>
-                        <a href="https://www.facebook.com/rachid.coachinglife/" class="social-btn facebook"><img src="facebook-icon.png" alt="Facebook" style="width: 24px; height: 24px;"></a>
-                        <a href="https://tiktok.com/@rachid_coaching_life" class="social-btn tiktok"><img src="tiktok-icon.png" alt="TikTok" style="width: 24px; height: 24px;"></a>
+                        <a href="https://instagram.com/rachid_coaching_life"  class="social-btn instagram"><img src="images/icons/icône-instagram.png" alt="Instagram" style="width: 24px; height: 24px;"></a>
+                        <a href="https://www.facebook.com/rachid.coachinglife/"  class="social-btn facebook"><img src="images/icons/icône-facebook.png" alt="Facebook" style="width: 24px; height: 24px;"></a>
+                        <a href="https://tiktok.com/@rachid_coaching_life"  class="social-btn tiktok"><img src="images/icons/icône-tiktok.png" alt="TikTok" style="width: 24px; height: 24px;"></a>
                     </div>
                 </div>
-                
                 <div class="contact-form">
                     <form>
                         <div class="form-group">
@@ -705,7 +603,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -714,7 +611,6 @@
                     <h4>Rachid Coaching Life</h4>
                     <p style="color: #d1d5db;">Coaching personnel et professionnel 100% gratuit pour vous aider à atteindre vos objectifs et transformer votre vie.</p>
                 </div>
-                
                 <div class="footer-section">
                     <h4>Liens rapides</h4>
                     <ul>
@@ -724,23 +620,20 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="https://calendly.com/rachid-coaching-life">Calendly</a></li>
-                        <li><a href="https://wa.me/33659525636">+33 6 59 52 56 36</a></li>
+                        <li><a href="https://calendly.com/rachid-coaching-life">Calendly</a></li> 
+                        <li><a href="https://wa.me/33659525636">+33  6 59 52 56 36</a></li>
                         <li><a href="mailto:rachidcoachinglife@outlook.com">Email</a></li>
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2025 Rachid Coaching Life. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
-
     <script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -755,7 +648,6 @@
                 }
             });
         });
-
         // Form submission
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
