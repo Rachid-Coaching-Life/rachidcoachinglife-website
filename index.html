@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rachid Coaching Life — La clarté avant la motivation</title>
   <meta name="description" content="Conseils de vie lucides, en 60 secondes. Pour les 20-35 ans qui veulent avancer — sans attendre la motivation."/>
+
   <style>
     :root {
       --bg: #ffffff;
@@ -18,12 +19,17 @@
       --success: #22c55e;
       --danger: #ef4444;
       --shadow: 0 12px 30px rgba(0,0,0,0.08);
-      --radius: 18px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -40,10 +46,6 @@
 
     a {
       color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
       text-decoration: none;
     }
 
@@ -118,12 +120,11 @@
       margin-bottom: 18px;
     }
 
-    /* HEADER */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.92);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
@@ -168,7 +169,6 @@
       font-size: 0.95rem;
     }
 
-    /* HERO */
     .hero {
       background:
         radial-gradient(circle at top left, rgba(37,99,235,0.08), transparent 30%),
@@ -250,7 +250,6 @@
       box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     }
 
-    /* PROBLEM */
     .problem-box {
       max-width: 860px;
       margin: 0 auto;
@@ -278,7 +277,6 @@
       font-size: 1.05rem;
     }
 
-    /* APPROACH */
     .approach {
       background: var(--soft);
     }
@@ -317,7 +315,6 @@
       font-size: 1.02rem;
     }
 
-    /* SERVICES */
     .services {
       background: #fff;
     }
@@ -357,7 +354,6 @@
       font-size: 0.98rem;
     }
 
-    /* CONTENT */
     .content {
       background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     }
@@ -414,7 +410,6 @@
       color: rgba(255,255,255,0.88);
     }
 
-    /* FOR WHO */
     .for-who {
       background: #111827;
       color: #fff;
@@ -461,7 +456,6 @@
       font-weight: 800;
     }
 
-    /* ABOUT */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -483,7 +477,6 @@
       box-shadow: var(--shadow);
     }
 
-    /* CTA FINAL */
     .cta-final {
       background: var(--soft);
       text-align: center;
@@ -507,7 +500,6 @@
       margin-top: 24px;
     }
 
-    /* FOOTER */
     footer {
       background: #111;
       color: #aaa;
@@ -516,9 +508,10 @@
       text-align: center;
     }
 
-    footer a { color: #fff; }
+    footer a {
+      color: #fff;
+    }
 
-    /* MOBILE */
     @media (max-width: 900px) {
       .hero-grid,
       .about-grid {
@@ -544,7 +537,9 @@
     }
 
     @media (max-width: 640px) {
-      .section { padding: 56px 0; }
+      .section {
+        padding: 56px 0;
+      }
 
       header .container {
         min-height: 72px;
@@ -587,7 +582,6 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="container">
       <a href="#" class="brand" aria-label="Rachid Coaching Life">
@@ -605,7 +599,6 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-grid">
@@ -613,8 +606,8 @@
           <div class="badge">Clarté • Discipline • Action</div>
           <h1>La sagesse n’attend pas l’âge.</h1>
           <p>
-            Des conseils pro lucides, en 60 secondes.  
-            Pas de motivation vide. Pas de promesses miracles.  
+            Des conseils pro lucides, en 60 secondes.
+            Pas de motivation vide. Pas de promesses miracles.
             Juste des vérités simples pour avancer — si tu es prêt à les appliquer.
           </p>
 
@@ -638,7 +631,6 @@
     </div>
   </section>
 
-  <!-- PROBLEM -->
   <section class="section problem">
     <div class="container text-center">
       <h2 class="section-title">Tu as du potentiel. Mais tu stagnes.</h2>
@@ -662,7 +654,6 @@
     </div>
   </section>
 
-  <!-- APPROACH -->
   <section id="approach" class="section approach">
     <div class="container text-center">
       <h2 class="section-title">3 principes. Rien de plus.</h2>
@@ -691,7 +682,6 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section id="services" class="section services">
     <div class="container text-center">
       <h2 class="section-title">Les axes du projet</h2>
@@ -717,7 +707,7 @@
         </article>
 
         <article class="service-card">
-          <img src="images/mallette-service.png" alt="Conseils pratiques">
+          <img src="images/service-mallette.png" alt="Conseils pratiques">
           <div class="service-card-content">
             <h3>Conseils pratiques</h3>
             <p>Des pistes concrètes pour mieux avancer dans le projet pro, l’organisation et les choix du quotidien.</p>
@@ -727,7 +717,6 @@
     </div>
   </section>
 
-  <!-- CONTENT -->
   <section id="content" class="section content">
     <div class="container text-center">
       <h2 class="section-title">Contenu phare</h2>
@@ -759,7 +748,6 @@
     </div>
   </section>
 
-  <!-- FOR WHO -->
   <section class="section for-who">
     <div class="container">
       <h2 class="section-title text-center">Pour qui ?</h2>
@@ -789,7 +777,6 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about" class="section about">
     <div class="container">
       <div class="about-grid">
@@ -812,7 +799,6 @@
     </div>
   </section>
 
-  <!-- CTA FINAL -->
   <section class="section cta-final">
     <div class="container">
       <div class="cta-card">
@@ -834,7 +820,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <p>© 2026 Rachid Coaching Life — Tous droits réservés</p>
