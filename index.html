@@ -6,7 +6,7 @@
   <title>Rachid Coaching Life — La clarté avant la motivation</title>
   <meta
     name="description"
-    content="Conseils de vie lucides, en 60 secondes. Pour les 20-35 ans qui veulent avancer sans attendre la motivation."
+    content="Conseils de vie lucides en 60 secondes. Pour les 20-35 ans qui veulent avancer sans attendre la motivation."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,19 +19,20 @@
   <style>
     :root {
       --bg: #ffffff;
-      --text: #171717;
-      --muted: #5f5f5f;
-      --line: #e8e8e8;
-      --soft: #f7f8fa;
-      --soft-2: #eef2f7;
-      --primary: #111827;
+      --text: #161616;
+      --muted: #60646c;
+      --line: #e7e7ea;
+      --soft: #f6f8fb;
+      --soft-2: #edf3ff;
+      --primary: #0f172a;
       --accent: #2563eb;
       --accent-dark: #1d4ed8;
       --success: #16a34a;
       --danger: #dc2626;
-      --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-      --shadow-strong: 0 18px 40px rgba(0, 0, 0, 0.12);
-      --radius: 18px;
+      --card: #ffffff;
+      --shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+      --shadow-strong: 0 18px 48px rgba(15, 23, 42, 0.14);
+      --radius: 20px;
     }
 
     * {
@@ -46,17 +47,17 @@
 
     body {
       font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.65;
-      color: var(--text);
       background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
     img {
+      display: block;
       max-width: 100%;
       height: auto;
-      display: block;
     }
 
     a {
@@ -65,13 +66,12 @@
     }
 
     .container {
-      max-width: 1160px;
+      width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 0 20px;
     }
 
     .section {
-      padding: 88px 0;
+      padding: 92px 0;
     }
 
     .text-center {
@@ -80,28 +80,30 @@
 
     .section-tag {
       display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
+      margin-bottom: 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--soft-2);
+      color: var(--accent-dark);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 12px;
     }
 
     .section-title {
-      font-size: clamp(1.9rem, 2.8vw, 2.9rem);
-      line-height: 1.08;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.05;
       letter-spacing: -0.04em;
-      margin-bottom: 16px;
       color: var(--primary);
+      margin-bottom: 16px;
     }
 
     .section-subtitle {
-      max-width: 720px;
-      margin: 0 auto 38px;
+      max-width: 760px;
+      margin: 0 auto 40px;
       color: var(--muted);
       font-size: 1.04rem;
-      line-height: 1.75;
     }
 
     .btn {
@@ -111,21 +113,20 @@
       gap: 8px;
       min-height: 52px;
       padding: 14px 28px;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 0.96rem;
+      border-radius: 14px;
+      border: 2px solid transparent;
       background: var(--primary);
       color: #fff;
-      border: 2px solid transparent;
-      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      font-weight: 700;
+      font-size: 0.96rem;
+      transition: 0.2s ease;
       cursor: pointer;
       white-space: nowrap;
     }
 
     .btn:hover {
-      background: #000;
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
     }
 
     .btn-outline {
@@ -149,18 +150,11 @@
       border-color: var(--accent-dark);
     }
 
-    .badge {
-      display: inline-flex;
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
       align-items: center;
-      gap: 8px;
-      padding: 9px 15px;
-      border-radius: 999px;
-      background: #eff6ff;
-      color: var(--accent-dark);
-      font-size: 0.85rem;
-      font-weight: 700;
-      border: 1px solid #bfdbfe;
-      margin-bottom: 20px;
     }
 
     /* HEADER */
@@ -168,52 +162,51 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.94);
+      background: rgba(255,255,255,0.92);
       backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
 
     header .container {
-      min-height: 76px;
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 22px;
       position: relative;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       color: var(--primary);
       font-weight: 800;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
       flex-shrink: 0;
     }
 
     .brand img {
-      height: 46px;
+      height: 62px;
       width: auto;
       object-fit: contain;
     }
 
     .brand span {
-      font-size: 1rem;
+      font-size: 1.08rem;
     }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 22px;
       flex-wrap: wrap;
     }
 
     .nav a {
       color: #374151;
       font-weight: 600;
-      font-size: 0.92rem;
+      font-size: 0.94rem;
       transition: color 0.15s ease;
     }
 
@@ -226,49 +219,64 @@
       flex-direction: column;
       gap: 5px;
       background: none;
-      border: none;
+      border: 0;
       cursor: pointer;
-      padding: 6px;
+      padding: 8px;
     }
 
     .nav-toggle span {
-      display: block;
       width: 24px;
       height: 2px;
       background: var(--primary);
-      border-radius: 2px;
+      border-radius: 999px;
+      display: block;
     }
 
     /* HERO */
     .hero {
+      position: relative;
+      overflow: hidden;
       background:
-        radial-gradient(circle at 15% 20%, rgba(37,99,235,0.07), transparent 35%),
-        radial-gradient(circle at 85% 80%, rgba(17,24,39,0.06), transparent 30%),
-        linear-gradient(160deg, #f8fafc 0%, #eef2f7 100%);
-      padding: 98px 0 74px;
+        radial-gradient(circle at 10% 15%, rgba(37,99,235,0.08), transparent 32%),
+        radial-gradient(circle at 85% 85%, rgba(17,24,39,0.08), transparent 26%),
+        linear-gradient(145deg, #f8fbff 0%, #eef3fb 100%);
+      padding: 110px 0 76px;
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.08fr 0.92fr;
-      gap: 52px;
+      gap: 54px;
       align-items: center;
     }
 
+    .hero-copy .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: var(--accent-dark);
+      font-size: 0.83rem;
+      font-weight: 800;
+      border: 1px solid #bfdbfe;
+    }
+
     .hero-copy h1 {
-      font-size: clamp(2.7rem, 5.6vw, 5rem);
-      line-height: 0.98;
-      letter-spacing: -0.05em;
-      margin-bottom: 20px;
+      font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
       color: var(--primary);
+      margin-bottom: 22px;
     }
 
     .hero-copy p {
-      font-size: 1.12rem;
+      max-width: 600px;
+      font-size: 1.1rem;
       color: #4b5563;
-      max-width: 560px;
       margin-bottom: 30px;
-      line-height: 1.75;
     }
 
     .hero-ctas {
@@ -282,8 +290,8 @@
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      font-size: 0.9rem;
       color: var(--muted);
+      font-size: 0.92rem;
       font-weight: 600;
     }
 
@@ -293,74 +301,75 @@
       gap: 6px;
     }
 
-    .hero-card {
-      background: rgba(255,255,255,0.9);
+    .hero-visual {
+      background: rgba(255,255,255,0.86);
       border: 1px solid rgba(255,255,255,0.9);
-      border-radius: 28px;
-      padding: 20px;
+      border-radius: 30px;
+      padding: 18px;
       box-shadow: var(--shadow);
     }
 
     .hero-avatar-wrap {
       position: relative;
-      min-height: 500px;
-      border-radius: 20px;
+      border-radius: 24px;
       overflow: hidden;
       display: flex;
       justify-content: center;
-      align-items: flex-end;
-      background: linear-gradient(180deg, #dbeafe 0%, #f1f5f9 100%);
-      padding-top: 24px;
+      align-items: center;
+      min-height: 480px;
+      background: linear-gradient(180deg, #dbeafe 0%, #f8fbff 100%);
+      padding: 24px;
     }
 
     .hero-avatar {
-      width: min(100%, 420px);
-      max-height: 480px;
+      width: 100%;
+      max-width: 380px;
+      max-height: 430px;
       object-fit: contain;
-      filter: drop-shadow(0 24px 32px rgba(0,0,0,0.15));
+      filter: drop-shadow(0 26px 36px rgba(0,0,0,0.14));
     }
 
     .floating-quote {
       position: absolute;
       left: 16px;
       bottom: 16px;
+      max-width: 270px;
       background: rgba(255,255,255,0.97);
-      color: #111;
-      max-width: 260px;
-      border-radius: 14px;
-      padding: 14px 16px;
+      color: #111827;
+      border-radius: 16px;
+      padding: 15px 16px;
       font-weight: 700;
-      font-size: 0.9rem;
-      line-height: 1.4;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      font-size: 0.92rem;
+      line-height: 1.45;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
       border-left: 3px solid var(--accent);
     }
 
     /* PROBLEM */
     .problem-box {
-      max-width: 900px;
+      max-width: 930px;
       margin: 0 auto;
+      padding: 34px;
+      border-radius: 26px;
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 34px;
       box-shadow: var(--shadow);
     }
 
     .problem-list {
       display: grid;
       gap: 16px;
-      text-align: left;
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto;
+      text-align: left;
     }
 
     .problem-list li {
       list-style: none;
       padding: 16px 18px;
-      background: var(--soft);
-      border-radius: 14px;
       border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--soft);
       font-size: 1.03rem;
     }
 
@@ -379,16 +388,17 @@
 
     .principle {
       background: #fff;
-      padding: 28px;
-      border-radius: 18px;
       border: 1px solid var(--line);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
       text-align: left;
     }
 
     .principle h3 {
-      margin-bottom: 10px;
       font-size: 1.18rem;
+      margin-bottom: 10px;
+      color: var(--primary);
     }
 
     .principle p {
@@ -398,9 +408,9 @@
     .avatar-note {
       font-style: italic;
       color: #555;
-      max-width: 560px;
+      max-width: 580px;
       margin: 0 auto;
-      font-size: 1.02rem;
+      font-size: 1.03rem;
     }
 
     /* SERVICES */
@@ -413,7 +423,7 @@
     .service-card {
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 20px;
+      border-radius: 22px;
       overflow: hidden;
       box-shadow: var(--shadow);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -426,7 +436,7 @@
 
     .service-card img {
       width: 100%;
-      height: 220px;
+      height: 230px;
       object-fit: cover;
       background: #fff;
     }
@@ -447,14 +457,14 @@
       font-size: 0.97rem;
     }
 
-    /* VIDEO SECTION */
+    /* VIDEOS */
     .content {
       background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     }
 
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
       gap: 24px;
       align-items: start;
     }
@@ -462,7 +472,7 @@
     .video-card {
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 22px;
+      border-radius: 24px;
       overflow: hidden;
       box-shadow: var(--shadow);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -482,7 +492,7 @@
       width: 100%;
       aspect-ratio: 9 / 16;
       object-fit: cover;
-      border-radius: 14px;
+      border-radius: 16px;
       background: #000;
     }
 
@@ -493,27 +503,52 @@
 
     .video-tag {
       display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent-dark);
-      background: #eaf2ff;
+      margin-bottom: 12px;
       padding: 7px 10px;
       border-radius: 999px;
-      margin-bottom: 12px;
+      background: #eaf2ff;
+      color: var(--accent-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     .video-meta h3 {
       font-size: 1.08rem;
-      margin-bottom: 8px;
       color: var(--primary);
+      margin-bottom: 8px;
     }
 
     .video-meta p {
       font-size: 0.95rem;
       color: var(--muted);
-      line-height: 1.65;
+    }
+
+    /* FUTURE SECTIONS */
+    .future-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .future-card {
+      padding: 24px;
+      border: 1px dashed #cbd5e1;
+      border-radius: 18px;
+      background: #fff;
+      text-align: left;
+    }
+
+    .future-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+      color: var(--primary);
+    }
+
+    .future-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
     /* FOR WHO */
@@ -543,7 +578,7 @@
 
     .for-who-col h3 {
       margin-bottom: 16px;
-      font-size: 1.16rem;
+      font-size: 1.14rem;
     }
 
     .for-who-col ul {
@@ -567,6 +602,32 @@
       font-weight: 800;
     }
 
+    /* TESTIMONIALS */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      text-align: left;
+    }
+
+    .testimonial-card p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .testimonial-card strong {
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
     /* ABOUT */
     .about-grid {
       display: grid;
@@ -583,10 +644,38 @@
 
     .about-visual img {
       width: 100%;
-      min-height: 420px;
+      min-height: 430px;
       object-fit: cover;
       border-radius: 24px;
       box-shadow: var(--shadow);
+    }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 20px;
+      text-align: left;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.03);
+    }
+
+    .faq-item h3 {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+      font-size: 0.96rem;
     }
 
     /* CTA FINAL */
@@ -596,12 +685,12 @@
     }
 
     .cta-card {
-      max-width: 840px;
+      max-width: 860px;
       margin: 0 auto;
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 38px 24px;
+      border-radius: 30px;
+      padding: 40px 26px;
       box-shadow: var(--shadow);
     }
 
@@ -617,7 +706,7 @@
     footer {
       background: #111;
       color: #aaa;
-      padding: 32px 0;
+      padding: 34px 0;
       font-size: 0.9rem;
       text-align: center;
     }
@@ -629,6 +718,7 @@
     /* MOBILE */
     @media (max-width: 900px) {
       .hero-grid,
+      .grid-2,
       .about-grid {
         grid-template-columns: 1fr;
       }
@@ -674,15 +764,15 @@
 
     @media (max-width: 640px) {
       .section {
-        padding: 60px 0;
+        padding: 62px 0;
       }
 
       header .container {
-        min-height: 72px;
+        min-height: 74px;
       }
 
       .brand img {
-        height: 42px;
+        height: 50px;
       }
 
       .brand span {
@@ -690,7 +780,7 @@
       }
 
       .hero {
-        padding: 72px 0 52px;
+        padding: 76px 0 54px;
       }
 
       .hero-avatar-wrap {
@@ -717,7 +807,7 @@
   <header>
     <div class="container">
       <a href="#" class="brand" aria-label="Rachid Coaching Life">
-        <img src="images/logo.png" alt="Logo Rachid Coaching Life" width="46" height="46" />
+        <img src="images/logo.png" alt="Logo Rachid Coaching Life" />
         <span>Rachid Coaching Life</span>
       </a>
 
@@ -725,7 +815,9 @@
         <a href="#approach">Approche</a>
         <a href="#services">Axes</a>
         <a href="#content">Contenu</a>
+        <a href="#future">À venir</a>
         <a href="#about">À propos</a>
+        <a href="#faq">FAQ</a>
         <a href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener">TikTok ↗</a>
       </nav>
 
@@ -739,7 +831,7 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="badge">✦ Coaching de vie — contenu gratuit</div>
+          <div class="eyebrow">✦ Coaching de vie — contenu gratuit</div>
           <h1>La clarté<br>avant la motivation.</h1>
           <p>
             Des conseils directs, en 60 secondes.<br>
@@ -760,7 +852,7 @@
           </div>
         </div>
 
-        <div class="hero-card">
+        <div class="hero-visual">
           <div class="hero-avatar-wrap">
             <img
               src="images/avatar-octogenaire.png"
@@ -830,12 +922,12 @@
     </div>
   </section>
 
-  <section id="services" class="section services">
+  <section id="services" class="section">
     <div class="container text-center">
       <span class="section-tag">Les axes</span>
       <h2 class="section-title">Trois leviers pour te remettre en mouvement</h2>
       <p class="section-subtitle">
-        Le projet repose sur trois piliers simples : clarifier, discipliner, appliquer.
+        Clarifier, discipliner, appliquer. Le projet repose sur trois piliers simples.
       </p>
 
       <div class="services-grid">
@@ -871,28 +963,28 @@
       <span class="section-tag">Le contenu</span>
       <h2 class="section-title">Contenu phare</h2>
       <p class="section-subtitle">
-        Trois vidéos courtes pour découvrir le ton, la direction et la clarté du projet.
+        Trois vidéos pour découvrir le ton, la direction et la manière de parler de Rachid Coaching Life.
       </p>
 
       <div class="video-grid">
         <article class="video-card">
           <div class="video-frame">
             <video controls playsinline preload="metadata">
-              <source src="vid%C3%A9os%20TikTok/l%27ennuie.mp4" type="video/mp4" />
+              <source src="TikTok/l%27ennuie.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture vidéo.
             </video>
           </div>
           <div class="video-meta">
             <span class="video-tag">Vidéo 1</span>
             <h3>L’ennuie</h3>
-            <p>Une réflexion courte sur le vide, l’élan perdu et la nécessité de retrouver une direction.</p>
+            <p>Une réflexion sur le vide, la perte d’élan et la nécessité de retrouver une direction juste.</p>
           </div>
         </article>
 
         <article class="video-card">
           <div class="video-frame">
             <video controls playsinline preload="metadata">
-              <source src="vid%C3%A9os%20TikTok/l%27impasse.mp4" type="video/mp4" />
+              <source src="TikTok/l%27impasse.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture vidéo.
             </video>
           </div>
@@ -906,7 +998,7 @@
         <article class="video-card">
           <div class="video-frame">
             <video controls playsinline preload="metadata">
-              <source src="vid%C3%A9os%20TikTok/le%20silence.mp4" type="video/mp4" />
+              <source src="TikTok/le%20silence.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture vidéo.
             </video>
           </div>
@@ -918,10 +1010,39 @@
         </article>
       </div>
 
-      <div style="margin-top: 28px;">
+      <div style="margin-top:28px;">
         <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn btn-outline" target="_blank" rel="noopener">
           Voir plus sur TikTok
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="future" class="section">
+    <div class="container text-center">
+      <span class="section-tag">À venir</span>
+      <h2 class="section-title">Des rubriques prêtes pour la suite</h2>
+      <p class="section-subtitle">
+        Le site est pensé pour grandir avec ton projet. Voici les sections que tu pourras activer plus tard.
+      </p>
+
+      <div class="future-grid">
+        <article class="future-card">
+          <h3>Témoignages</h3>
+          <p>Pour ajouter plus tard des retours concrets, crédibles et rassurants.</p>
+        </article>
+        <article class="future-card">
+          <h3>Newsletter</h3>
+          <p>Pour envoyer un conseil par semaine et créer une relation plus directe avec ton audience.</p>
+        </article>
+        <article class="future-card">
+          <h3>Ressources</h3>
+          <p>Pour proposer des PDF, des guides ou des règles simples à appliquer.</p>
+        </article>
+        <article class="future-card">
+          <h3>Appel découverte</h3>
+          <p>Pour transformer le site en support de prise de contact et d’accompagnement.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -956,7 +1077,32 @@
     </div>
   </section>
 
-  <section id="about" class="section about">
+  <section class="section">
+    <div class="container text-center">
+      <span class="section-tag">Témoignages</span>
+      <h2 class="section-title">Un emplacement déjà prêt</h2>
+      <p class="section-subtitle">
+        Quand tu voudras ajouter des retours réels, cette section sera déjà structurée.
+      </p>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <p>“Espace réservé pour un futur témoignage. Tu pourras mettre ici une phrase courte, crédible et impactante.”</p>
+          <strong>— Prénom / rôle</strong>
+        </article>
+        <article class="testimonial-card">
+          <p>“Deuxième emplacement prêt à l’emploi pour renforcer la confiance et la preuve sociale.”</p>
+          <strong>— Prénom / rôle</strong>
+        </article>
+        <article class="testimonial-card">
+          <p>“Troisième emplacement pour montrer que les contenus ne font pas seulement réfléchir, mais agissent.”</p>
+          <strong>— Prénom / rôle</strong>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
     <div class="container">
       <div class="about-grid">
         <div class="about-copy">
@@ -967,8 +1113,8 @@
           <p>Mon outil ? Des vidéos courtes avec moi en version octogénaire — pour te parler avec le recul que je n’avais pas à ton âge.</p>
           <p><strong>Mon critère : chaque mot doit servir. Le reste, c’est toi qui le construis.</strong></p>
 
-          <div style="margin-top: 22px;">
-            <a href="mailto:rachidcoachinglife@outlook.com" class="btn">Demander un appel découverte</a>
+          <div style="margin-top:22px;">
+            <a href="mailto:rachidcoachinglife@outlook.com" class="btn btn-accent">Demander un appel découverte</a>
           </div>
         </div>
 
@@ -979,12 +1125,39 @@
     </div>
   </section>
 
+  <section id="faq" class="section cta-final">
+    <div class="container">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title text-center">Questions fréquentes</h2>
+      <p class="section-subtitle text-center">
+        Une base prête pour éviter de reconstruire le site plus tard.
+      </p>
+
+      <div class="faq-list">
+        <article class="faq-item">
+          <h3>Est-ce que le contenu est gratuit ?</h3>
+          <p>Oui. Le contenu publié sur TikTok est librement accessible.</p>
+        </article>
+
+        <article class="faq-item">
+          <h3>Est-ce qu’il y aura un accompagnement plus tard ?</h3>
+          <p>Cette rubrique est prévue pour pouvoir l’ajouter sans refaire tout le site.</p>
+        </article>
+
+        <article class="faq-item">
+          <h3>Comment te contacter ?</h3>
+          <p>Par mail ou via les futurs boutons d’appel découverte / formulaire.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="section cta-final">
     <div class="container">
       <div class="cta-card">
         <span class="section-tag">Dernière étape</span>
         <h2 class="section-title">Prêt à recevoir l’essentiel ?</h2>
-        <p class="section-subtitle" style="margin-bottom: 0;">
+        <p class="section-subtitle" style="margin-bottom:0;">
           Si tu veux moins de bruit, plus de clarté et des paroles qui servent vraiment, commence ici.
         </p>
 
@@ -994,7 +1167,7 @@
         </div>
 
         <p style="margin-top:20px; color:#555; font-size:0.95rem;">
-          📩 Ou reçois 1 conseil pro / semaine :
+          📩 Ou reçois 1 conseil par semaine :
           <a href="mailto:rachidcoachinglife@outlook.com?subject=Newsletter">m’inscrire</a>
         </p>
       </div>
