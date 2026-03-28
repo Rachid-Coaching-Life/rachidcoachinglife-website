@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rachid Coaching Life — La clarté avant la motivation</title>
+  <title>Rachid Coaching Life — 80 ans de sagesse. 0 bullshit.</title>
   <meta
     name="description"
-    content="Conseils de vie lucides en 60 secondes. Pour les 20-35 ans qui veulent avancer sans attendre la motivation."
+    content="Des conseils de vie lucides, directs et applicables. Pour les 18–35 ans qui veulent avancer sans attendre la motivation."
   />
+
+  <!-- SEO / Social -->
+  <meta property="og:title" content="Rachid Coaching Life — 80 ans de sagesse. 0 bullshit." />
+  <meta property="og:description" content="Des conseils de vie lucides, directs et applicables. Pas de motivation vide. Pas de bullshit." />
+  <meta property="og:image" content="https://rachidcoachinglife.com/images/og-image.jpg" />
+  <meta property="og:url" content="https://rachidcoachinglife.com" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/png" href="images/favicon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   />
 
@@ -20,19 +29,21 @@
     :root {
       --bg: #ffffff;
       --text: #161616;
-      --muted: #60646c;
-      --line: #e7e7ea;
+      --muted: #5f636b;
+      --line: #e8eaee;
       --soft: #f6f8fb;
-      --soft-2: #edf3ff;
+      --soft-2: #edf4ff;
       --primary: #0f172a;
       --accent: #2563eb;
       --accent-dark: #1d4ed8;
       --success: #16a34a;
       --danger: #dc2626;
+      --warning: #f59e0b;
       --card: #ffffff;
       --shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
-      --shadow-strong: 0 18px 48px rgba(15, 23, 42, 0.14);
-      --radius: 20px;
+      --shadow-strong: 0 18px 50px rgba(15, 23, 42, 0.14);
+      --radius: 22px;
+      --container: 1180px;
     }
 
     * {
@@ -49,7 +60,7 @@
       font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
@@ -63,10 +74,15 @@
     a {
       color: var(--accent);
       text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
     }
 
     .container {
-      width: min(1180px, calc(100% - 40px));
+      width: min(var(--container), calc(100% - 40px));
       margin: 0 auto;
     }
 
@@ -79,24 +95,29 @@
     }
 
     .section-tag {
-      display: inline-block;
-      margin-bottom: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       padding: 8px 14px;
       border-radius: 999px;
       background: var(--soft-2);
       color: var(--accent-dark);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      margin-bottom: 14px;
+      border: 1px solid #d6e6ff;
     }
 
     .section-title {
-      font-size: clamp(2rem, 3vw, 3rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
+      font-size: clamp(2rem, 3vw, 3.1rem);
+      line-height: 1.04;
+      letter-spacing: -0.05em;
       color: var(--primary);
       margin-bottom: 16px;
+      font-weight: 900;
     }
 
     .section-subtitle {
@@ -104,6 +125,7 @@
       margin: 0 auto 40px;
       color: var(--muted);
       font-size: 1.04rem;
+      line-height: 1.75;
     }
 
     .btn {
@@ -114,19 +136,26 @@
       min-height: 52px;
       padding: 14px 28px;
       border-radius: 14px;
-      border: 2px solid transparent;
-      background: var(--primary);
-      color: #fff;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 0.96rem;
-      transition: 0.2s ease;
+      border: 2px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
       cursor: pointer;
       white-space: nowrap;
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #000;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.14);
     }
 
     .btn-outline {
@@ -140,39 +169,40 @@
       color: #fff;
     }
 
-    .btn-accent {
-      background: var(--accent);
-      border-color: var(--accent);
+    .btn-tiktok {
+      background: #000;
+      color: #fff;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
     }
 
-    .btn-accent:hover {
-      background: var(--accent-dark);
-      border-color: var(--accent-dark);
+    .btn-tiktok:hover {
+      background: #ff0050;
+      box-shadow: 0 14px 28px rgba(255, 0, 80, 0.22);
     }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 44px;
-      align-items: center;
+    .btn-tiktok::before {
+      content: "▶";
+      font-size: 0.9rem;
     }
 
     /* HEADER */
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.92);
+      z-index: 1000;
+      background: rgba(255,255,255,0.94);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
     }
 
     header .container {
-      min-height: 82px;
+      min-height: 84px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 22px;
+      gap: 20px;
       position: relative;
     }
 
@@ -181,19 +211,19 @@
       align-items: center;
       gap: 14px;
       color: var(--primary);
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -0.03em;
       flex-shrink: 0;
     }
 
     .brand img {
-      height: 62px;
+      height: 64px;
       width: auto;
       object-fit: contain;
     }
 
     .brand span {
-      font-size: 1.08rem;
+      font-size: 1.05rem;
     }
 
     .nav {
@@ -205,13 +235,25 @@
 
     .nav a {
       color: #374151;
-      font-weight: 600;
-      font-size: 0.94rem;
-      transition: color 0.15s ease;
+      font-weight: 700;
+      font-size: 0.93rem;
+      position: relative;
+      padding-bottom: 4px;
     }
 
-    .nav a:hover {
-      color: var(--accent);
+    .nav a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
     }
 
     .nav-toggle {
@@ -238,9 +280,21 @@
       overflow: hidden;
       background:
         radial-gradient(circle at 10% 15%, rgba(37,99,235,0.08), transparent 32%),
-        radial-gradient(circle at 85% 85%, rgba(17,24,39,0.08), transparent 26%),
+        radial-gradient(circle at 86% 82%, rgba(17,24,39,0.08), transparent 26%),
         linear-gradient(145deg, #f8fbff 0%, #eef3fb 100%);
-      padding: 110px 0 76px;
+      padding: 108px 0 82px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -140px;
+      right: -140px;
+      width: 460px;
+      height: 460px;
+      background: radial-gradient(circle, rgba(37,99,235,0.09), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
     }
 
     .hero-grid {
@@ -248,9 +302,11 @@
       grid-template-columns: 1.08fr 0.92fr;
       gap: 54px;
       align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
-    .hero-copy .eyebrow {
+    .hero-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -259,54 +315,65 @@
       border-radius: 999px;
       background: #eff6ff;
       color: var(--accent-dark);
-      font-size: 0.83rem;
+      font-size: 0.82rem;
       font-weight: 800;
       border: 1px solid #bfdbfe;
     }
 
     .hero-copy h1 {
-      font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+      font-size: clamp(2.8rem, 5.8vw, 5.4rem);
       line-height: 0.95;
-      letter-spacing: -0.055em;
+      letter-spacing: -0.06em;
       color: var(--primary);
       margin-bottom: 22px;
+      font-weight: 900;
+    }
+
+    .hero-copy h1 .highlight {
+      color: var(--accent);
+      display: block;
     }
 
     .hero-copy p {
-      max-width: 600px;
+      max-width: 620px;
       font-size: 1.1rem;
-      color: #4b5563;
-      margin-bottom: 30px;
+      color: #475569;
+      margin-bottom: 32px;
     }
 
     .hero-ctas {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
       margin-bottom: 26px;
     }
 
     .hero-proof {
       display: flex;
-      gap: 20px;
+      gap: 18px;
       flex-wrap: wrap;
       color: var(--muted);
       font-size: 0.92rem;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .hero-proof span {
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      padding: 10px 14px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+      border-radius: 12px;
     }
 
-    .hero-visual {
-      background: rgba(255,255,255,0.86);
+    .hero-card {
+      background: rgba(255,255,255,0.9);
       border: 1px solid rgba(255,255,255,0.9);
       border-radius: 30px;
       padding: 18px;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-strong);
+      backdrop-filter: blur(10px);
     }
 
     .hero-avatar-wrap {
@@ -316,15 +383,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 480px;
+      min-height: 440px;
       background: linear-gradient(180deg, #dbeafe 0%, #f8fbff 100%);
-      padding: 24px;
+      padding: 18px;
     }
 
     .hero-avatar {
       width: 100%;
-      max-width: 380px;
-      max-height: 430px;
+      max-width: 390px;
+      max-height: 390px;
       object-fit: contain;
       filter: drop-shadow(0 26px 36px rgba(0,0,0,0.14));
     }
@@ -333,7 +400,7 @@
       position: absolute;
       left: 16px;
       bottom: 16px;
-      max-width: 270px;
+      max-width: 280px;
       background: rgba(255,255,255,0.97);
       color: #111827;
       border-radius: 16px;
@@ -341,63 +408,133 @@
       font-weight: 700;
       font-size: 0.92rem;
       line-height: 1.45;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
       border-left: 3px solid var(--accent);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
     }
 
-    /* PROBLEM */
-    .problem-box {
-      max-width: 930px;
-      margin: 0 auto;
-      padding: 34px;
-      border-radius: 26px;
+    /* GENERIC CARD BLOCKS */
+    .card-box {
       background: #fff;
       border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 34px;
       box-shadow: var(--shadow);
     }
 
+    /* PROBLEM */
     .problem-list {
       display: grid;
       gap: 16px;
       max-width: 720px;
-      margin: 0 auto;
+      margin: 0 auto 26px;
       text-align: left;
     }
 
     .problem-list li {
       list-style: none;
-      padding: 16px 18px;
+      padding: 16px 18px 16px 50px;
       border: 1px solid var(--line);
       border-radius: 14px;
       background: var(--soft);
       font-size: 1.03rem;
+      position: relative;
     }
 
-    /* APPROACH */
+    .problem-list li::before {
+      content: "⚠";
+      position: absolute;
+      left: 18px;
+      top: 15px;
+      font-weight: 900;
+      color: var(--warning);
+      font-size: 1.15rem;
+    }
+
+    .problem-conclusion {
+      margin-top: 26px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 16px;
+      border-left: 4px solid var(--warning);
+    }
+
+    /* CONCEPT / APPROACH */
     .approach {
       background: var(--soft);
     }
 
+    .avatar-explanation {
+      max-width: 820px;
+      margin: 0 auto 44px;
+      padding: 32px;
+      background: #fff;
+      border: 2px solid rgba(37,99,235,0.16);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .avatar-explanation h3 {
+      font-size: 1.35rem;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+
+    .avatar-explanation p {
+      color: #3f3f46;
+      font-size: 1.03rem;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .avatar-explanation strong {
+      color: var(--accent-dark);
+    }
+
     .principles {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
-      margin-top: 28px;
-      margin-bottom: 40px;
+      margin-top: 30px;
     }
 
     .principle {
       background: #fff;
+      padding: 30px;
+      border-radius: 20px;
       border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.05);
       text-align: left;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .principle:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.10);
+    }
+
+    .principle::before {
+      content: attr(data-number);
+      position: absolute;
+      top: -12px;
+      left: 24px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 16px rgba(37,99,235,0.28);
     }
 
     .principle h3 {
-      font-size: 1.18rem;
+      margin-top: 18px;
       margin-bottom: 10px;
+      font-size: 1.18rem;
       color: var(--primary);
     }
 
@@ -405,150 +542,129 @@
       color: var(--muted);
     }
 
-    .avatar-note {
-      font-style: italic;
-      color: #555;
-      max-width: 580px;
-      margin: 0 auto;
-      font-size: 1.03rem;
-    }
-
     /* SERVICES */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 26px;
     }
 
     .service-card {
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 22px;
+      border-radius: 24px;
       overflow: hidden;
       box-shadow: var(--shadow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .service-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
       box-shadow: var(--shadow-strong);
     }
 
     .service-card img {
       width: 100%;
-      height: 230px;
+      height: 240px;
       object-fit: cover;
       background: #fff;
     }
 
     .service-card-content {
-      padding: 22px;
+      padding: 24px;
       text-align: left;
     }
 
     .service-card h3 {
+      font-size: 1.14rem;
       margin-bottom: 10px;
-      font-size: 1.12rem;
       color: var(--primary);
     }
 
     .service-card p {
-      color: var(--muted);
       font-size: 0.97rem;
+      color: var(--muted);
     }
 
-    /* VIDEOS */
+    /* CONTENT */
     .content {
       background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     }
 
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 24px;
-      align-items: start;
-    }
-
-    .video-card {
+    .content-preview-note {
+      max-width: 720px;
+      margin: 0 auto 34px;
+      padding: 20px 24px;
       background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .video-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-strong);
-    }
-
-    .video-frame {
-      background: #0f172a;
-      padding: 12px;
-    }
-
-    .video-frame video {
-      width: 100%;
-      aspect-ratio: 9 / 16;
-      object-fit: cover;
-      border-radius: 16px;
-      background: #000;
-    }
-
-    .video-meta {
-      padding: 18px 18px 20px;
-      text-align: left;
-    }
-
-    .video-tag {
-      display: inline-block;
-      margin-bottom: 12px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: #eaf2ff;
-      color: var(--accent-dark);
-      font-size: 0.78rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .video-meta h3 {
-      font-size: 1.08rem;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .video-meta p {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    /* FUTURE SECTIONS */
-    .future-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
-
-    .future-card {
-      padding: 24px;
       border: 1px dashed #cbd5e1;
       border-radius: 18px;
-      background: #fff;
-      text-align: left;
+      color: #4b5563;
+      font-size: 0.98rem;
+      text-align: center;
     }
 
-    .future-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.05rem;
+    .content-preview-note strong {
       color: var(--primary);
     }
 
-    .future-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-bottom: 36px;
+    }
+
+    .content-card {
+      aspect-ratio: 9 / 16;
+      border-radius: 24px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: #fff;
+      background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease;
+    }
+
+    .content-card:hover {
+      transform: scale(1.02);
+    }
+
+    .content-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 20%, rgba(0,0,0,0.78) 100%);
+    }
+
+    .content-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .content-card span {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.86;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    .content-card h3 {
+      font-size: 1.18rem;
+      line-height: 1.24;
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+
+    .content-card p {
+      font-size: 0.96rem;
+      color: rgba(255,255,255,0.92);
+      line-height: 1.55;
     }
 
     /* FOR WHO */
@@ -563,22 +679,29 @@
 
     .for-who-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      max-width: 920px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      max-width: 940px;
       margin: 0 auto;
     }
 
     .for-who-col {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 24px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 22px;
+      padding: 28px;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .for-who-col:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.08);
     }
 
     .for-who-col h3 {
-      margin-bottom: 16px;
-      font-size: 1.14rem;
+      margin-bottom: 18px;
+      font-size: 1.22rem;
+      font-weight: 900;
     }
 
     .for-who-col ul {
@@ -586,29 +709,98 @@
     }
 
     .for-who-col li {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      padding-left: 30px;
+      position: relative;
+      line-height: 1.65;
       color: rgba(255,255,255,0.92);
     }
 
+    .yes::before,
+    .no::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 900;
+      font-size: 1.2rem;
+    }
+
     .yes::before {
-      content: "✓ ";
+      content: "✓";
       color: var(--success);
-      font-weight: 800;
     }
 
     .no::before {
-      content: "✗ ";
+      content: "✗";
       color: var(--danger);
-      font-weight: 800;
     }
 
-    /* TESTIMONIALS */
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .about-copy p {
+      margin-bottom: 18px;
+      color: #3f3f46;
+      font-size: 1.04rem;
+      line-height: 1.75;
+    }
+
+    .about-copy strong {
+      color: var(--primary);
+    }
+
+    .about-visual img {
+      width: 100%;
+      min-height: 450px;
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 18px;
+      margin: 34px 0;
+      padding: 24px;
+      background: var(--soft);
+      border-radius: 20px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.3rem;
+      line-height: 1;
+      font-weight: 900;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    /* FUTURE / FAQ / TESTIMONIALS */
+    .future-grid,
     .testimonials-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
     }
 
+    .future-card,
     .testimonial-card {
       background: #fff;
       border: 1px solid var(--line);
@@ -618,39 +810,26 @@
       text-align: left;
     }
 
-    .testimonial-card p {
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
+    .future-card h3,
     .testimonial-card strong {
       color: var(--primary);
-      font-size: 0.95rem;
     }
 
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 44px;
-      align-items: center;
+    .future-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
     }
 
-    .about-copy p {
-      margin-bottom: 16px;
-      color: #3f3f46;
-      font-size: 1.02rem;
+    .future-card p,
+    .testimonial-card p {
+      color: var(--muted);
+      font-size: 0.97rem;
     }
 
-    .about-visual img {
-      width: 100%;
-      min-height: 430px;
-      object-fit: cover;
-      border-radius: 24px;
-      box-shadow: var(--shadow);
+    .testimonial-card p {
+      margin-bottom: 12px;
     }
 
-    /* FAQ */
     .faq-list {
       max-width: 860px;
       margin: 0 auto;
@@ -678,7 +857,7 @@
       font-size: 0.96rem;
     }
 
-    /* CTA FINAL */
+    /* CTA */
     .cta-final {
       background: var(--soft);
       text-align: center;
@@ -689,36 +868,92 @@
       margin: 0 auto;
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 30px;
-      padding: 40px 26px;
+      border-radius: 32px;
+      padding: 42px 28px;
       box-shadow: var(--shadow);
     }
 
     .cta-buttons {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       justify-content: center;
       flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .newsletter-note {
       margin-top: 24px;
+      padding: 18px;
+      background: var(--soft);
+      border-radius: 14px;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .newsletter-note a {
+      font-weight: 800;
+      text-decoration: underline;
     }
 
     /* FOOTER */
     footer {
-      background: #111;
+      background: #0a0a0a;
       color: #aaa;
-      padding: 34px 0;
+      padding: 40px 0;
       font-size: 0.9rem;
+    }
+
+    footer .container {
       text-align: center;
+    }
+
+    .footer-links {
+      margin-top: 16px;
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     footer a {
       color: #fff;
     }
 
-    /* MOBILE */
+    /* SCROLL TO TOP */
+    .scroll-to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s ease;
+      z-index: 1000;
+    }
+
+    .scroll-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-to-top:hover {
+      background: var(--accent);
+      transform: translateY(-4px);
+    }
+
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero-grid,
-      .grid-2,
       .about-grid {
         grid-template-columns: 1fr;
       }
@@ -740,7 +975,7 @@
       .nav {
         display: none;
         position: absolute;
-        top: 76px;
+        top: 78px;
         left: 20px;
         right: 20px;
         background: #fff;
@@ -760,15 +995,19 @@
       .nav-toggle {
         display: flex;
       }
+
+      .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 640px) {
       .section {
-        padding: 62px 0;
+        padding: 64px 0;
       }
 
       header .container {
-        min-height: 74px;
+        min-height: 76px;
       }
 
       .brand img {
@@ -780,11 +1019,15 @@
       }
 
       .hero {
-        padding: 76px 0 54px;
+        padding: 82px 0 58px;
       }
 
       .hero-avatar-wrap {
-        min-height: 380px;
+        min-height: 360px;
+      }
+
+      .hero-avatar {
+        max-height: 330px;
       }
 
       .floating-quote {
@@ -795,9 +1038,22 @@
         font-size: 0.88rem;
       }
 
-      .problem-box,
+      .card-box,
       .cta-card {
         padding: 24px 18px;
+      }
+
+      .stats-row {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .scroll-to-top {
+        right: 18px;
+        bottom: 18px;
       }
     }
   </style>
@@ -807,18 +1063,17 @@
   <header>
     <div class="container">
       <a href="#" class="brand" aria-label="Rachid Coaching Life">
-        <img src="images/logo.png" alt="Logo Rachid Coaching Life" />
+        <img src="images/logo.png" alt="Logo Rachid Coaching Life">
         <span>Rachid Coaching Life</span>
       </a>
 
       <nav class="nav" id="mainNav" role="navigation" aria-label="Navigation principale">
+        <a href="#concept">Concept</a>
         <a href="#approach">Approche</a>
         <a href="#services">Axes</a>
-        <a href="#content">Contenu</a>
-        <a href="#future">À venir</a>
         <a href="#about">À propos</a>
         <a href="#faq">FAQ</a>
-        <a href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener">TikTok ↗</a>
+        <a href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener">TikTok</a>
       </nav>
 
       <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" onclick="document.getElementById('mainNav').classList.toggle('nav-open')">
@@ -831,35 +1086,33 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">✦ Coaching de vie — contenu gratuit</div>
-          <h1>La clarté<br>avant la motivation.</h1>
+          <div class="hero-eyebrow">Lucidité • Discipline • Action</div>
+          <h1>
+            80 ans de sagesse.
+            <span class="highlight">0 bullshit.</span>
+          </h1>
           <p>
-            Des conseils directs, en 60 secondes.<br>
-            Pour les 20–35 ans qui veulent avancer sans attendre l’envie parfaite.
+            Le seul coach qui te parle depuis l’expérience, pas depuis un livre de développement personnel.
+            Pas de motivation vide. Juste des vérités simples pour avancer.
           </p>
 
           <div class="hero-ctas">
-            <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn btn-accent" target="_blank" rel="noopener">
-              Voir les vidéos TikTok
+            <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn btn-tiktok" target="_blank" rel="noopener">
+              Suivre sur TikTok
             </a>
-            <a href="#approach" class="btn btn-outline">Comprendre l’approche</a>
+            <a href="#concept" class="btn btn-outline">Comprendre le concept</a>
           </div>
 
           <div class="hero-proof">
-            <span>✓ Contenu gratuit</span>
-            <span>✓ Aucun blabla</span>
-            <span>✓ Applicable aujourd’hui</span>
+            <span>✓ 80 ans de sagesse</span>
+            <span>✓ 0 bullshit</span>
+            <span>✓ Des conseils applicables</span>
           </div>
         </div>
 
-        <div class="hero-visual">
+        <div class="hero-card">
           <div class="hero-avatar-wrap">
-            <img
-              src="images/avatar-octogenaire.png"
-              alt="Rachid Coaching Life — Avatar sagesse"
-              class="hero-avatar"
-              loading="eager"
-            />
+            <img src="images/avatar-octogenaire.png" alt="Avatar octogénaire — Rachid Coaching Life" class="hero-avatar">
             <div class="floating-quote">
               “La discipline commence quand les excuses cessent d’avoir de la valeur.”
             </div>
@@ -869,89 +1122,115 @@
     </div>
   </section>
 
-  <section class="section problem">
+  <section class="section">
     <div class="container text-center">
-      <span class="section-tag">Le constat</span>
       <h2 class="section-title">Tu as du potentiel. Mais tu stagnes.</h2>
       <p class="section-subtitle">
-        Le problème n’est pas toujours un manque de capacité. Souvent, c’est un excès de bruit, d’hésitation et de dispersion.
+        Le problème n’est pas le manque de capacité. C’est un excès de bruit, d’hésitation et de dispersion.
       </p>
 
-      <div class="problem-box">
+      <div class="card-box">
         <ul class="problem-list">
           <li>Tu ne sais pas par où commencer ton projet pro.</li>
-          <li>Tu consommes du contenu, mais rien ne change vraiment dans ta vie.</li>
+          <li>Tu consommes du contenu, mais rien ne change vraiment.</li>
           <li>Tu attends le bon moment… et tu perds des mois.</li>
         </ul>
 
-        <p style="margin-top:24px; color:#555;">
-          Ce n’est pas un manque de capacité.<br>
-          <strong>C’est un excès de bruit.</strong><br>
-          Ici, on coupe le superflu.
+        <div class="problem-conclusion">
+          <p style="margin:0; color:#333; font-size:1.04rem;">
+            Ce n’est pas un manque de capacité.<br>
+            <strong style="color:#000;">C’est un excès de bruit.</strong><br>
+            Ici, on coupe le superflu.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="concept" class="section approach">
+    <div class="container text-center">
+      <span class="section-tag">Le concept</span>
+      <h2 class="section-title">Pourquoi un avatar de 80 ans ?</h2>
+      <p class="section-subtitle">
+        Parce que la vraie sagesse ne vient pas d’un jeune qui a lu trois livres.
+      </p>
+
+      <div class="avatar-explanation">
+        <h3>Mon approche unique</h3>
+        <p>Je m’appelle Rachid. Je transmets mes messages à travers un avatar octogénaire.</p>
+        <p><strong>Pourquoi ?</strong></p>
+        <p>
+          Parce que la vraie sagesse ne vient pas d’un livre de développement personnel.
+          Elle vient de l’expérience. De l’échec. Du recul.
+        </p>
+        <p>
+          <strong>Mon avatar a 80 ans.<br>Mes conseils ont 80 ans de lucidité.</strong>
+        </p>
+        <p style="margin:0;">
+          Je te parle comme je voudrais qu’on me parle à 20 ans —
+          avec la clarté que je n’avais pas à ton âge.
         </p>
       </div>
     </div>
   </section>
 
-  <section id="approach" class="section approach">
+  <section id="approach" class="section">
     <div class="container text-center">
       <span class="section-tag">La méthode</span>
       <h2 class="section-title">3 principes. Rien de plus.</h2>
       <p class="section-subtitle">
-        Une approche directe, simple et applicable.
+        Une approche directe, simple et applicable immédiatement.
       </p>
 
       <div class="principles">
-        <div class="principle">
-          <h3>1. Lucidité</h3>
-          <p>On nomme les blocages réels. Pas les excuses élégantes.</p>
+        <div class="principle" data-number="1">
+          <h3>Lucidité</h3>
+          <p>On nomme les blocages réels. Pas les excuses élégantes. Si tu tournes en rond, on identifie pourquoi.</p>
         </div>
 
-        <div class="principle">
-          <h3>2. Discipline &gt; Motivation</h3>
-          <p>La motivation passe. Les systèmes restent. On construit des habitudes, pas des émotions passagères.</p>
+        <div class="principle" data-number="2">
+          <h3>Discipline &gt; Motivation</h3>
+          <p>La motivation passe. Les systèmes restent. On construit des habitudes solides, pas des émotions passagères.</p>
         </div>
 
-        <div class="principle">
-          <h3>3. Action immédiate</h3>
-          <p>Chaque vidéo doit te laisser avec une idée applicable aujourd’hui. Pas “un jour”. Aujourd’hui.</p>
+        <div class="principle" data-number="3">
+          <h3>Action immédiate</h3>
+          <p>Chaque vidéo te laisse avec une idée applicable aujourd’hui. Pas “un jour”. Aujourd’hui. Maintenant.</p>
         </div>
       </div>
-
-      <p class="avatar-note">“Je te parle comme je voudrais qu’on me parle à 25 ans.”</p>
     </div>
   </section>
 
   <section id="services" class="section">
     <div class="container text-center">
       <span class="section-tag">Les axes</span>
-      <h2 class="section-title">Trois leviers pour te remettre en mouvement</h2>
+      <h2 class="section-title">Les axes du projet</h2>
       <p class="section-subtitle">
-        Clarifier, discipliner, appliquer. Le projet repose sur trois piliers simples.
+        Trois leviers pour remettre de l’ordre, retrouver une direction et avancer avec plus de justesse.
       </p>
 
       <div class="services-grid">
         <article class="service-card">
-          <img src="images/service-brain.png" alt="Clarté mentale" />
+          <img src="images/service-brain.png" alt="Clarté mentale">
           <div class="service-card-content">
             <h3>Clarté mentale</h3>
-            <p>Identifier les vrais blocages, réduire le bruit et retrouver une pensée plus nette.</p>
+            <p>Identifier les vrais blocages, réduire le bruit mental et retrouver une pensée plus nette et plus efficace.</p>
           </div>
         </article>
 
         <article class="service-card">
-          <img src="images/service-heart.png" alt="Discipline intérieure" />
+          <img src="images/service-heart.png" alt="Discipline intérieure">
           <div class="service-card-content">
             <h3>Discipline intérieure</h3>
-            <p>Arrêter d’attendre l’envie, tenir une ligne simple et construire une stabilité plus solide.</p>
+            <p>Arrêter d’attendre l’envie, tenir une ligne simple et construire une stabilité qui dure.</p>
           </div>
         </article>
 
         <article class="service-card">
-          <img src="images/mallette-service.png" alt="Conseils pratiques" />
+          <img src="images/mallette-service.png" alt="Conseils pratiques">
           <div class="service-card-content">
             <h3>Conseils pratiques</h3>
-            <p>Des pistes concrètes pour mieux avancer dans le projet pro, l’organisation et les choix du quotidien.</p>
+            <p>Des pistes concrètes pour mieux avancer dans ton projet pro, ton organisation et tes choix quotidiens.</p>
           </div>
         </article>
       </div>
@@ -963,95 +1242,43 @@
       <span class="section-tag">Le contenu</span>
       <h2 class="section-title">Contenu phare</h2>
       <p class="section-subtitle">
-        Trois vidéos pour découvrir le ton, la direction et la manière de parler de Rachid Coaching Life.
+        Les vidéos TikTok seront intégrées ici plus tard. Pour l’instant, on garde une section propre et crédible.
       </p>
 
-      <div class="video-grid">
-        <article class="video-card">
-          <div class="video-frame">
-            <video controls playsinline preload="metadata">
-              <source src="TikTok/l%27ennuie.mp4" type="video/mp4" />
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-          </div>
-          <div class="video-meta">
-            <span class="video-tag">Vidéo 1</span>
-            <h3>L’ennuie</h3>
-            <p>Une réflexion sur le vide, la perte d’élan et la nécessité de retrouver une direction juste.</p>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <div class="video-frame">
-            <video controls playsinline preload="metadata">
-              <source src="TikTok/l%27impasse.mp4" type="video/mp4" />
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-          </div>
-          <div class="video-meta">
-            <span class="video-tag">Vidéo 2</span>
-            <h3>L’impasse</h3>
-            <p>Une vidéo sur les blocages, la discipline et la manière de traverser ce qui semble fermer la route.</p>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <div class="video-frame">
-            <video controls playsinline preload="metadata">
-              <source src="TikTok/le%20silence.mp4" type="video/mp4" />
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-          </div>
-          <div class="video-meta">
-            <span class="video-tag">Vidéo 3</span>
-            <h3>Le silence</h3>
-            <p>Une prise de parole plus posée sur le recul, l’écoute intérieure et le poids du bruit autour de nous.</p>
-          </div>
-        </article>
+      <div class="content-preview-note">
+        <strong>Choix stratégique :</strong> on ne met pas encore les vidéos intégrées ici tant qu’elles ne reflètent pas exactement ton niveau d’exigence visuelle.
       </div>
 
-      <div style="margin-top:28px;">
-        <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn btn-outline" target="_blank" rel="noopener">
-          Voir plus sur TikTok
-        </a>
-      </div>
-    </div>
-  </section>
+      <div class="content-grid">
+        <div class="content-card">
+          <span>Principe 1</span>
+          <h3>Tu n’as pas besoin de plus de motivation.</h3>
+          <p>Tu as besoin d’une règle claire que tu respectes, même sans envie.</p>
+        </div>
 
-  <section id="future" class="section">
-    <div class="container text-center">
-      <span class="section-tag">À venir</span>
-      <h2 class="section-title">Des rubriques prêtes pour la suite</h2>
-      <p class="section-subtitle">
-        Le site est pensé pour grandir avec ton projet. Voici les sections que tu pourras activer plus tard.
-      </p>
+        <div class="content-card">
+          <span>Principe 2</span>
+          <h3>L’impasse n’est pas toujours un mur.</h3>
+          <p>Parfois, c’est juste une porte dont tu n’as pas encore compris le code.</p>
+        </div>
 
-      <div class="future-grid">
-        <article class="future-card">
-          <h3>Témoignages</h3>
-          <p>Pour ajouter plus tard des retours concrets, crédibles et rassurants.</p>
-        </article>
-        <article class="future-card">
-          <h3>Newsletter</h3>
-          <p>Pour envoyer un conseil par semaine et créer une relation plus directe avec ton audience.</p>
-        </article>
-        <article class="future-card">
-          <h3>Ressources</h3>
-          <p>Pour proposer des PDF, des guides ou des règles simples à appliquer.</p>
-        </article>
-        <article class="future-card">
-          <h3>Appel découverte</h3>
-          <p>Pour transformer le site en support de prise de contact et d’accompagnement.</p>
-        </article>
+        <div class="content-card">
+          <span>Principe 3</span>
+          <h3>Le bruit t’épuise plus que l’effort.</h3>
+          <p>Ce qui te manque n’est pas toujours la force. Souvent, c’est la clarté.</p>
+        </div>
       </div>
+
+      <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn btn-tiktok" target="_blank" rel="noopener">
+        Voir tout le contenu sur TikTok
+      </a>
     </div>
   </section>
 
   <section class="section for-who">
     <div class="container">
-      <span class="section-tag" style="color:#93c5fd;">Le tri</span>
       <h2 class="section-title text-center">Pour qui ?</h2>
-      <p class="section-subtitle" style="color: rgba(255,255,255,0.78);">
+      <p class="section-subtitle text-center" style="color: rgba(255,255,255,0.85);">
         Ce projet ne parle pas à tout le monde — et c’est voulu.
       </p>
 
@@ -1059,45 +1286,20 @@
         <div class="for-who-col">
           <h3>Pour toi si :</h3>
           <ul>
-            <li class="yes">Tu veux clarifier ton projet pro sans attendre une révélation.</li>
-            <li class="yes">Tu es prêt à agir petit, mais régulier.</li>
-            <li class="yes">Tu acceptes une vérité inconfortable si elle te fait avancer.</li>
+            <li class="yes">Tu veux clarifier ton projet pro sans attendre une révélation magique.</li>
+            <li class="yes">Tu es prêt à agir petit, mais régulièrement.</li>
+            <li class="yes">Tu acceptes une vérité inconfortable si elle te fait vraiment avancer.</li>
           </ul>
         </div>
 
         <div class="for-who-col">
           <h3>Pas pour toi si :</h3>
           <ul>
-            <li class="no">Tu cherches une solution magique en 7 jours.</li>
+            <li class="no">Tu cherches une solution miracle en 7 jours.</li>
             <li class="no">Tu veux qu’on te valide sans te challenger.</li>
-            <li class="no">Tu attends d’être prêt pour commencer.</li>
+            <li class="no">Tu attends d’être 100% prêt pour commencer.</li>
           </ul>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container text-center">
-      <span class="section-tag">Témoignages</span>
-      <h2 class="section-title">Un emplacement déjà prêt</h2>
-      <p class="section-subtitle">
-        Quand tu voudras ajouter des retours réels, cette section sera déjà structurée.
-      </p>
-
-      <div class="testimonials-grid">
-        <article class="testimonial-card">
-          <p>“Espace réservé pour un futur témoignage. Tu pourras mettre ici une phrase courte, crédible et impactante.”</p>
-          <strong>— Prénom / rôle</strong>
-        </article>
-        <article class="testimonial-card">
-          <p>“Deuxième emplacement prêt à l’emploi pour renforcer la confiance et la preuve sociale.”</p>
-          <strong>— Prénom / rôle</strong>
-        </article>
-        <article class="testimonial-card">
-          <p>“Troisième emplacement pour montrer que les contenus ne font pas seulement réfléchir, mais agissent.”</p>
-          <strong>— Prénom / rôle</strong>
-        </article>
       </div>
     </div>
   </section>
@@ -1108,19 +1310,88 @@
         <div class="about-copy">
           <span class="section-tag">À propos</span>
           <h2 class="section-title">Une parole simple, utile et sans décor inutile</h2>
-          <p>Je m’appelle Rachid. Je ne suis pas gourou.</p>
-          <p>J’ai créé ce projet parce que j’en avais marre de voir des gens intelligents tourner en rond.</p>
-          <p>Mon outil ? Des vidéos courtes avec moi en version octogénaire — pour te parler avec le recul que je n’avais pas à ton âge.</p>
-          <p><strong>Mon critère : chaque mot doit servir. Le reste, c’est toi qui le construis.</strong></p>
+          <p>Je m’appelle Rachid. <strong>Je ne suis pas un gourou.</strong></p>
+          <p>J’ai créé ce projet parce que j’en avais marre de voir des gens intelligents tourner en rond, perdre des mois à consommer du contenu sans jamais passer à l’action.</p>
+          <p>Mon outil ? Des vidéos courtes avec mon avatar octogénaire — pour te parler avec le recul et la lucidité que je n’avais pas à ton âge.</p>
+          <p><strong>Mon critère : chaque mot doit servir.</strong> Le reste, c’est toi qui le construis.</p>
 
-          <div style="margin-top:22px;">
-            <a href="mailto:rachidcoachinglife@outlook.com" class="btn btn-accent">Demander un appel découverte</a>
+          <div class="stats-row">
+            <div class="stat">
+              <div class="stat-number">[X]K</div>
+              <div class="stat-label">Abonnés</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">[X]M</div>
+              <div class="stat-label">Vues</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">[X]+</div>
+              <div class="stat-label">Vidéos</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 28px;">
+            <a href="mailto:rachidcoachinglife@outlook.com" class="btn btn-primary">Demander un appel découverte</a>
           </div>
         </div>
 
         <div class="about-visual">
-          <img src="images/salon-coaching.png" alt="Salon de coaching" />
+          <img src="images/salon-coaching.png" alt="Espace coaching Rachid">
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container text-center">
+      <span class="section-tag">Pour plus tard</span>
+      <h2 class="section-title">Rubriques déjà prêtes</h2>
+      <p class="section-subtitle">
+        J’ai ajouté des zones que tu pourras activer plus tard sans refaire tout le site.
+      </p>
+
+      <div class="future-grid">
+        <article class="future-card">
+          <h3>Newsletter</h3>
+          <p>Pour envoyer un conseil lucide par semaine et créer une relation directe avec ton audience.</p>
+        </article>
+        <article class="future-card">
+          <h3>Ressources</h3>
+          <p>Pour proposer des PDF, règles, checklists ou mini-guides plus tard.</p>
+        </article>
+        <article class="future-card">
+          <h3>Appel découverte</h3>
+          <p>Pour transformer le site en support de prise de rendez-vous et d’accompagnement.</p>
+        </article>
+        <article class="future-card">
+          <h3>Programme</h3>
+          <p>Pour présenter plus tard une offre structurée sans devoir repenser tout le design.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container text-center">
+      <span class="section-tag">Preuve sociale</span>
+      <h2 class="section-title">Section témoignages prête</h2>
+      <p class="section-subtitle">
+        On ne ment pas avec de faux avis. Mais on prépare proprement l’emplacement pour le futur.
+      </p>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <p>“Ici, tu pourras ajouter plus tard un vrai retour d’expérience court, crédible et marquant.”</p>
+          <strong>— Témoignage futur</strong>
+        </article>
+        <article class="testimonial-card">
+          <p>“Cette section est prête pour accueillir des retours abonnés, clients ou captures de messages.”</p>
+          <strong>— Témoignage futur</strong>
+        </article>
+        <article class="testimonial-card">
+          <p>“Mieux vaut un site sobre sans faux témoignages qu’un site faux qui abîme la confiance.”</p>
+          <strong>— Règle de crédibilité</strong>
+        </article>
       </div>
     </div>
   </section>
@@ -1130,23 +1401,23 @@
       <span class="section-tag">FAQ</span>
       <h2 class="section-title text-center">Questions fréquentes</h2>
       <p class="section-subtitle text-center">
-        Une base prête pour éviter de reconstruire le site plus tard.
+        Une base prête pour clarifier les points importants au fur et à mesure.
       </p>
 
       <div class="faq-list">
         <article class="faq-item">
           <h3>Est-ce que le contenu est gratuit ?</h3>
-          <p>Oui. Le contenu publié sur TikTok est librement accessible.</p>
+          <p>Oui. Le contenu principal diffusé sur TikTok reste gratuit et accessible.</p>
         </article>
 
         <article class="faq-item">
           <h3>Est-ce qu’il y aura un accompagnement plus tard ?</h3>
-          <p>Cette rubrique est prévue pour pouvoir l’ajouter sans refaire tout le site.</p>
+          <p>Le site est déjà structuré pour cette éventualité, sans annoncer quelque chose qui n’existe pas encore.</p>
         </article>
 
         <article class="faq-item">
-          <h3>Comment te contacter ?</h3>
-          <p>Par mail ou via les futurs boutons d’appel découverte / formulaire.</p>
+          <h3>Pourquoi utiliser un avatar ?</h3>
+          <p>Parce que le concept repose sur l’idée de parler avec le recul, la distance et la lucidité d’un homme de 80 ans.</p>
         </article>
       </div>
     </div>
@@ -1158,31 +1429,58 @@
         <span class="section-tag">Dernière étape</span>
         <h2 class="section-title">Prêt à recevoir l’essentiel ?</h2>
         <p class="section-subtitle" style="margin-bottom:0;">
-          Si tu veux moins de bruit, plus de clarté et des paroles qui servent vraiment, commence ici.
+          Si tu veux moins de bruit, plus de clarté et des conseils qui servent vraiment, commence ici.
         </p>
 
         <div class="cta-buttons">
-          <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn btn-accent" target="_blank" rel="noopener">Suivre sur TikTok</a>
+          <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn btn-tiktok" target="_blank" rel="noopener">
+            Suivre sur TikTok
+          </a>
           <a href="mailto:rachidcoachinglife@outlook.com" class="btn btn-outline">Demander un appel découverte</a>
         </div>
 
-        <p style="margin-top:20px; color:#555; font-size:0.95rem;">
-          📩 Ou reçois 1 conseil par semaine :
-          <a href="mailto:rachidcoachinglife@outlook.com?subject=Newsletter">m’inscrire</a>
-        </p>
+        <div class="newsletter-note">
+          📩 <strong>Newsletter bientôt disponible</strong> — 1 conseil lucide par semaine.<br>
+          <a href="mailto:rachidcoachinglife@outlook.com?subject=Inscription Newsletter">Être prévenu du lancement</a>
+        </div>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>© 2026 Rachid Coaching Life — Tous droits réservés</p>
-      <p style="margin-top:8px; font-size:0.85rem;">
-        Contenu éducatif — pas un substitut à un accompagnement thérapeutique.<br />
-        <a href="#">Mentions légales</a> • <a href="#">Politique de confidentialité</a>
+      <p><strong>© 2026 Rachid Coaching Life</strong> — Tous droits réservés</p>
+
+      <div class="footer-links">
+        <a href="#">Mentions légales</a>
+        <span style="color:#555;">•</span>
+        <a href="#">Politique de confidentialité</a>
+        <span style="color:#555;">•</span>
+        <a href="mailto:rachidcoachinglife@outlook.com">Contact</a>
+      </div>
+
+      <p style="margin-top:16px; font-size:0.85rem; color:#777;">
+        Contenu éducatif — ne remplace pas un accompagnement thérapeutique professionnel.
       </p>
     </div>
   </footer>
 
+  <button class="scroll-to-top" id="scrollTopBtn" aria-label="Revenir en haut de la page">↑</button>
+
+  <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add("visible");
+      } else {
+        scrollBtn.classList.remove("visible");
+      }
+    });
+
+    scrollBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>
