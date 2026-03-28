@@ -27,9 +27,10 @@
       --primary: #111827;
       --accent: #2563eb;
       --accent-dark: #1d4ed8;
-      --success: #22c55e;
-      --danger: #ef4444;
+      --success: #16a34a;
+      --danger: #dc2626;
       --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      --shadow-strong: 0 18px 40px rgba(0, 0, 0, 0.12);
       --radius: 18px;
     }
 
@@ -45,7 +46,7 @@
 
     body {
       font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
+      line-height: 1.65;
       color: var(--text);
       background: var(--bg);
       -webkit-font-smoothing: antialiased;
@@ -70,24 +71,34 @@
     }
 
     .section {
-      padding: 84px 0;
+      padding: 88px 0;
     }
 
     .text-center {
       text-align: center;
     }
 
+    .section-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
     .section-title {
-      font-size: clamp(1.9rem, 2.7vw, 2.8rem);
+      font-size: clamp(1.9rem, 2.8vw, 2.9rem);
       line-height: 1.08;
+      letter-spacing: -0.04em;
       margin-bottom: 16px;
-      letter-spacing: -0.03em;
       color: var(--primary);
     }
 
     .section-subtitle {
-      max-width: 760px;
-      margin: 0 auto 36px;
+      max-width: 720px;
+      margin: 0 auto 38px;
       color: var(--muted);
       font-size: 1.04rem;
       line-height: 1.75;
@@ -97,20 +108,24 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       min-height: 52px;
       padding: 14px 28px;
       border-radius: 12px;
       font-weight: 700;
+      font-size: 0.96rem;
       background: var(--primary);
       color: #fff;
       border: 2px solid transparent;
-      transition: 0.2s ease;
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
       cursor: pointer;
+      white-space: nowrap;
     }
 
     .btn:hover {
       background: #000;
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
     .btn-outline {
@@ -124,17 +139,28 @@
       color: #fff;
     }
 
+    .btn-accent {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .btn-accent:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+    }
+
     .badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 14px;
+      padding: 9px 15px;
       border-radius: 999px;
-      background: #eaf2ff;
+      background: #eff6ff;
       color: var(--accent-dark);
-      font-size: 0.92rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      margin-bottom: 18px;
+      border: 1px solid #bfdbfe;
+      margin-bottom: 20px;
     }
 
     /* HEADER */
@@ -142,24 +168,25 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
 
     header .container {
-      min-height: 78px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 20px;
       position: relative;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       color: var(--primary);
       font-weight: 800;
       letter-spacing: -0.02em;
@@ -167,26 +194,27 @@
     }
 
     .brand img {
-      height: 50px;
+      height: 46px;
       width: auto;
       object-fit: contain;
     }
 
     .brand span {
-      font-size: 1.05rem;
+      font-size: 1rem;
     }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 28px;
       flex-wrap: wrap;
     }
 
     .nav a {
-      color: #1f2937;
+      color: #374151;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
+      transition: color 0.15s ease;
     }
 
     .nav a:hover {
@@ -195,10 +223,12 @@
 
     .nav-toggle {
       display: none;
-      border: 0;
-      background: transparent;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
       cursor: pointer;
-      padding: 8px;
+      padding: 6px;
     }
 
     .nav-toggle span {
@@ -206,38 +236,38 @@
       width: 24px;
       height: 2px;
       background: var(--primary);
-      border-radius: 999px;
-      margin: 5px 0;
+      border-radius: 2px;
     }
 
     /* HERO */
     .hero {
       background:
-        radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(17, 24, 39, 0.08), transparent 25%),
-        linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
-      padding: 96px 0 72px;
+        radial-gradient(circle at 15% 20%, rgba(37,99,235,0.07), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(17,24,39,0.06), transparent 30%),
+        linear-gradient(160deg, #f8fafc 0%, #eef2f7 100%);
+      padding: 98px 0 74px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 46px;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 52px;
       align-items: center;
     }
 
     .hero-copy h1 {
-      font-size: clamp(2.5rem, 5vw, 4.7rem);
-      line-height: 1.02;
-      margin-bottom: 18px;
-      letter-spacing: -0.045em;
+      font-size: clamp(2.7rem, 5.6vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      margin-bottom: 20px;
+      color: var(--primary);
     }
 
     .hero-copy p {
-      font-size: 1.1rem;
-      color: #444;
-      max-width: 640px;
-      margin-bottom: 28px;
+      font-size: 1.12rem;
+      color: #4b5563;
+      max-width: 560px;
+      margin-bottom: 30px;
       line-height: 1.75;
     }
 
@@ -245,15 +275,15 @@
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 22px;
+      margin-bottom: 26px;
     }
 
     .hero-proof {
       display: flex;
-      gap: 18px;
+      gap: 20px;
       flex-wrap: wrap;
+      font-size: 0.9rem;
       color: var(--muted);
-      font-size: 0.95rem;
       font-weight: 600;
     }
 
@@ -264,72 +294,74 @@
     }
 
     .hero-card {
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid rgba(255, 255, 255, 0.85);
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(255,255,255,0.9);
       border-radius: 28px;
-      padding: 26px;
+      padding: 20px;
       box-shadow: var(--shadow);
     }
 
     .hero-avatar-wrap {
       position: relative;
-      min-height: 520px;
-      border-radius: 24px;
+      min-height: 500px;
+      border-radius: 20px;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      background: linear-gradient(180deg, #dbeafe 0%, #f8fafc 100%);
-      padding-top: 26px;
+      background: linear-gradient(180deg, #dbeafe 0%, #f1f5f9 100%);
+      padding-top: 24px;
     }
 
     .hero-avatar {
-      width: min(100%, 440px);
-      max-height: 500px;
+      width: min(100%, 420px);
+      max-height: 480px;
       object-fit: contain;
-      filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.18));
+      filter: drop-shadow(0 24px 32px rgba(0,0,0,0.15));
     }
 
     .floating-quote {
       position: absolute;
-      left: 18px;
-      bottom: 18px;
-      background: rgba(255, 255, 255, 0.95);
+      left: 16px;
+      bottom: 16px;
+      background: rgba(255,255,255,0.97);
       color: #111;
-      max-width: 270px;
+      max-width: 260px;
       border-radius: 14px;
       padding: 14px 16px;
       font-weight: 700;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      line-height: 1.45;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      border-left: 3px solid var(--accent);
     }
 
     /* PROBLEM */
     .problem-box {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
-      background: var(--soft);
+      background: #fff;
       border: 1px solid var(--line);
       border-radius: 24px;
-      padding: 32px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      padding: 34px;
+      box-shadow: var(--shadow);
     }
 
     .problem-list {
       display: grid;
       gap: 16px;
       text-align: left;
-      max-width: 680px;
+      max-width: 700px;
       margin: 0 auto;
     }
 
     .problem-list li {
       list-style: none;
       padding: 16px 18px;
-      background: #fff;
+      background: var(--soft);
       border-radius: 14px;
       border: 1px solid var(--line);
-      font-size: 1.05rem;
+      font-size: 1.03rem;
     }
 
     /* APPROACH */
@@ -342,21 +374,21 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 24px;
       margin-top: 28px;
-      margin-bottom: 38px;
+      margin-bottom: 40px;
     }
 
     .principle {
       background: #fff;
-      padding: 26px;
-      border-radius: 16px;
+      padding: 28px;
+      border-radius: 18px;
       border: 1px solid var(--line);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
       text-align: left;
     }
 
     .principle h3 {
       margin-bottom: 10px;
-      font-size: 1.2rem;
+      font-size: 1.18rem;
     }
 
     .principle p {
@@ -372,10 +404,6 @@
     }
 
     /* SERVICES */
-    .services {
-      background: #fff;
-    }
-
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -383,17 +411,17 @@
     }
 
     .service-card {
-      background: var(--soft);
+      background: #fff;
       border: 1px solid var(--line);
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      box-shadow: var(--shadow);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .service-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+      box-shadow: var(--shadow-strong);
     }
 
     .service-card img {
@@ -405,19 +433,21 @@
 
     .service-card-content {
       padding: 22px;
+      text-align: left;
     }
 
     .service-card h3 {
       margin-bottom: 10px;
-      font-size: 1.15rem;
+      font-size: 1.12rem;
+      color: var(--primary);
     }
 
     .service-card p {
       color: var(--muted);
-      font-size: 0.98rem;
+      font-size: 0.97rem;
     }
 
-    /* CONTENT / VIDEOS */
+    /* VIDEO SECTION */
     .content {
       background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     }
@@ -432,7 +462,7 @@
     .video-card {
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 20px;
+      border-radius: 22px;
       overflow: hidden;
       box-shadow: var(--shadow);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -440,7 +470,7 @@
 
     .video-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 16px 30px rgba(0,0,0,0.10);
+      box-shadow: var(--shadow-strong);
     }
 
     .video-frame {
@@ -500,20 +530,20 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
     }
 
     .for-who-col {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 18px;
       padding: 24px;
     }
 
     .for-who-col h3 {
       margin-bottom: 16px;
-      font-size: 1.2rem;
+      font-size: 1.16rem;
     }
 
     .for-who-col ul {
@@ -522,7 +552,7 @@
 
     .for-who-col li {
       margin-bottom: 12px;
-      color: rgba(255, 255, 255, 0.9);
+      color: rgba(255,255,255,0.92);
     }
 
     .yes::before {
@@ -541,7 +571,7 @@
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 42px;
+      gap: 44px;
       align-items: center;
     }
 
@@ -559,19 +589,19 @@
       box-shadow: var(--shadow);
     }
 
-    /* CTA */
+    /* CTA FINAL */
     .cta-final {
       background: var(--soft);
       text-align: center;
     }
 
     .cta-card {
-      max-width: 820px;
+      max-width: 840px;
       margin: 0 auto;
       background: #fff;
       border: 1px solid var(--line);
       border-radius: 28px;
-      padding: 36px 24px;
+      padding: 38px 24px;
       box-shadow: var(--shadow);
     }
 
@@ -620,7 +650,7 @@
       .nav {
         display: none;
         position: absolute;
-        top: 78px;
+        top: 76px;
         left: 20px;
         right: 20px;
         background: #fff;
@@ -638,14 +668,13 @@
       }
 
       .nav-toggle {
-        display: inline-flex;
-        flex-direction: column;
+        display: flex;
       }
     }
 
     @media (max-width: 640px) {
       .section {
-        padding: 56px 0;
+        padding: 60px 0;
       }
 
       header .container {
@@ -657,27 +686,23 @@
       }
 
       .brand span {
-        font-size: 0.96rem;
+        font-size: 0.95rem;
       }
 
       .hero {
-        padding: 70px 0 52px;
-      }
-
-      .hero-card {
-        padding: 18px;
+        padding: 72px 0 52px;
       }
 
       .hero-avatar-wrap {
-        min-height: 390px;
+        min-height: 380px;
       }
 
       .floating-quote {
-        left: 14px;
-        right: 14px;
-        bottom: 14px;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
         max-width: none;
-        font-size: 0.94rem;
+        font-size: 0.88rem;
       }
 
       .problem-box,
@@ -692,22 +717,20 @@
   <header>
     <div class="container">
       <a href="#" class="brand" aria-label="Rachid Coaching Life">
-        <img src="images/logo.png" alt="Logo Rachid Coaching Life" />
+        <img src="images/logo.png" alt="Logo Rachid Coaching Life" width="46" height="46" />
         <span>Rachid Coaching Life</span>
       </a>
 
-      <nav class="nav" id="mainNav">
+      <nav class="nav" id="mainNav" role="navigation" aria-label="Navigation principale">
         <a href="#approach">Approche</a>
         <a href="#services">Axes</a>
         <a href="#content">Contenu</a>
         <a href="#about">À propos</a>
-        <a href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener">TikTok ↗</a>
       </nav>
 
       <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" onclick="document.getElementById('mainNav').classList.toggle('nav-open')">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
@@ -716,30 +739,38 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="badge">Clarté • Discipline • Action</div>
-          <h1>La sagesse n’attend pas l’âge.</h1>
+          <div class="badge">✦ Coaching de vie — contenu gratuit</div>
+          <h1>La clarté<br>avant la motivation.</h1>
           <p>
-            Des conseils pro lucides, en 60 secondes.
-            Pas de motivation vide. Pas de promesses miracles.
-            Juste des vérités simples pour avancer — si tu es prêt à les appliquer.
+            Des conseils directs, en 60 secondes.<br>
+            Pour les 20–35 ans qui veulent avancer sans attendre l’envie parfaite.
           </p>
 
           <div class="hero-ctas">
-            <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn" target="_blank" rel="noopener">Voir les vidéos TikTok</a>
+            <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn btn-accent" target="_blank" rel="noopener">
+              Voir les vidéos TikTok
+            </a>
             <a href="#approach" class="btn btn-outline">Comprendre l’approche</a>
           </div>
 
           <div class="hero-proof">
-            <span>✓ Conseils directs</span>
-            <span>✓ Sans blabla</span>
-            <span>✓ Applicables aujourd’hui</span>
+            <span>✓ Contenu gratuit</span>
+            <span>✓ Aucun blabla</span>
+            <span>✓ Applicable aujourd’hui</span>
           </div>
         </div>
 
         <div class="hero-card">
           <div class="hero-avatar-wrap">
-            <img src="images/avatar-octogenaire.png" alt="Rachid Coaching Life — Avatar sagesse" class="hero-avatar" />
-            <div class="floating-quote">“La discipline commence quand les excuses cessent d’avoir de la valeur.”</div>
+            <img
+              src="images/avatar-octogenaire.png"
+              alt="Rachid Coaching Life — Avatar sagesse"
+              class="hero-avatar"
+              loading="eager"
+            />
+            <div class="floating-quote">
+              “La discipline commence quand les excuses cessent d’avoir de la valeur.”
+            </div>
           </div>
         </div>
       </div>
@@ -748,6 +779,7 @@
 
   <section class="section problem">
     <div class="container text-center">
+      <span class="section-tag">Le constat</span>
       <h2 class="section-title">Tu as du potentiel. Mais tu stagnes.</h2>
       <p class="section-subtitle">
         Le problème n’est pas toujours un manque de capacité. Souvent, c’est un excès de bruit, d’hésitation et de dispersion.
@@ -771,6 +803,7 @@
 
   <section id="approach" class="section approach">
     <div class="container text-center">
+      <span class="section-tag">La méthode</span>
       <h2 class="section-title">3 principes. Rien de plus.</h2>
       <p class="section-subtitle">
         Une approche directe, simple et applicable.
@@ -799,9 +832,10 @@
 
   <section id="services" class="section services">
     <div class="container text-center">
-      <h2 class="section-title">Les axes du projet</h2>
+      <span class="section-tag">Les axes</span>
+      <h2 class="section-title">Trois leviers pour te remettre en mouvement</h2>
       <p class="section-subtitle">
-        Trois leviers pour remettre de l’ordre, retrouver une direction et avancer avec plus de justesse.
+        Le projet repose sur trois piliers simples : clarifier, discipliner, appliquer.
       </p>
 
       <div class="services-grid">
@@ -834,6 +868,7 @@
 
   <section id="content" class="section content">
     <div class="container text-center">
+      <span class="section-tag">Le contenu</span>
       <h2 class="section-title">Contenu phare</h2>
       <p class="section-subtitle">
         Trois vidéos courtes pour découvrir le ton, la direction et la clarté du projet.
@@ -842,7 +877,7 @@
       <div class="video-grid">
         <article class="video-card">
           <div class="video-frame">
-            <video controls playsinline preload="metadata" poster="images/avatar-octogenaire.png">
+            <video controls playsinline preload="metadata">
               <source src="vid%C3%A9os%20TikTok/l%27ennuie.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture vidéo.
             </video>
@@ -856,7 +891,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <video controls playsinline preload="metadata" poster="images/avatar-octogenaire.png">
+            <video controls playsinline preload="metadata">
               <source src="vid%C3%A9os%20TikTok/l%27impasse.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture vidéo.
             </video>
@@ -870,7 +905,7 @@
 
         <article class="video-card">
           <div class="video-frame">
-            <video controls playsinline preload="metadata" poster="images/avatar-octogenaire.png">
+            <video controls playsinline preload="metadata">
               <source src="vid%C3%A9os%20TikTok/le%20silence.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture vidéo.
             </video>
@@ -893,6 +928,7 @@
 
   <section class="section for-who">
     <div class="container">
+      <span class="section-tag" style="color:#93c5fd;">Le tri</span>
       <h2 class="section-title text-center">Pour qui ?</h2>
       <p class="section-subtitle" style="color: rgba(255,255,255,0.78);">
         Ce projet ne parle pas à tout le monde — et c’est voulu.
@@ -924,7 +960,8 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-copy">
-          <h2 class="section-title">À propos</h2>
+          <span class="section-tag">À propos</span>
+          <h2 class="section-title">Une parole simple, utile et sans décor inutile</h2>
           <p>Je m’appelle Rachid. Je ne suis pas gourou.</p>
           <p>J’ai créé ce projet parce que j’en avais marre de voir des gens intelligents tourner en rond.</p>
           <p>Mon outil ? Des vidéos courtes avec moi en version octogénaire — pour te parler avec le recul que je n’avais pas à ton âge.</p>
@@ -945,13 +982,14 @@
   <section class="section cta-final">
     <div class="container">
       <div class="cta-card">
+        <span class="section-tag">Dernière étape</span>
         <h2 class="section-title">Prêt à recevoir l’essentiel ?</h2>
         <p class="section-subtitle" style="margin-bottom: 0;">
           Si tu veux moins de bruit, plus de clarté et des paroles qui servent vraiment, commence ici.
         </p>
 
         <div class="cta-buttons">
-          <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn" target="_blank" rel="noopener">Suivre sur TikTok</a>
+          <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn btn-accent" target="_blank" rel="noopener">Suivre sur TikTok</a>
           <a href="mailto:rachidcoachinglife@outlook.com" class="btn btn-outline">Demander un appel découverte</a>
         </div>
 
