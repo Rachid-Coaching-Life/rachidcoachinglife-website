@@ -2,9 +2,19 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rachid Coaching Life — La clarté avant la motivation</title>
-  <meta name="description" content="Conseils de vie lucides, en 60 secondes. Pour les 20-35 ans qui veulent avancer — sans attendre la motivation."/>
+  <meta
+    name="description"
+    content="Conseils de vie lucides, en 60 secondes. Pour les 20-35 ans qui veulent avancer sans attendre la motivation."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     :root {
@@ -13,12 +23,14 @@
       --muted: #5f5f5f;
       --line: #e8e8e8;
       --soft: #f7f8fa;
+      --soft-2: #eef2f7;
       --primary: #111827;
       --accent: #2563eb;
       --accent-dark: #1d4ed8;
       --success: #22c55e;
       --danger: #ef4444;
-      --shadow: 0 12px 30px rgba(0,0,0,0.08);
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      --radius: 18px;
     }
 
     * {
@@ -32,10 +44,12 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       line-height: 1.6;
       color: var(--text);
       background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     img {
@@ -56,7 +70,7 @@
     }
 
     .section {
-      padding: 80px 0;
+      padding: 84px 0;
     }
 
     .text-center {
@@ -64,10 +78,11 @@
     }
 
     .section-title {
-      font-size: clamp(1.9rem, 2.7vw, 2.7rem);
-      line-height: 1.1;
+      font-size: clamp(1.9rem, 2.7vw, 2.8rem);
+      line-height: 1.08;
       margin-bottom: 16px;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
+      color: var(--primary);
     }
 
     .section-subtitle {
@@ -75,6 +90,7 @@
       margin: 0 auto 36px;
       color: var(--muted);
       font-size: 1.04rem;
+      line-height: 1.75;
     }
 
     .btn {
@@ -89,6 +105,7 @@
       color: #fff;
       border: 2px solid transparent;
       transition: 0.2s ease;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -120,11 +137,12 @@
       margin-bottom: 18px;
     }
 
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.92);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
@@ -135,6 +153,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+      position: relative;
     }
 
     .brand {
@@ -144,6 +163,7 @@
       color: var(--primary);
       font-weight: 800;
       letter-spacing: -0.02em;
+      flex-shrink: 0;
     }
 
     .brand img {
@@ -169,12 +189,34 @@
       font-size: 0.95rem;
     }
 
+    .nav a:hover {
+      color: var(--accent);
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 999px;
+      margin: 5px 0;
+    }
+
+    /* HERO */
     .hero {
       background:
-        radial-gradient(circle at top left, rgba(37,99,235,0.08), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(17,24,39,0.08), transparent 25%),
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(17, 24, 39, 0.08), transparent 25%),
         linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
-      padding: 90px 0 70px;
+      padding: 96px 0 72px;
     }
 
     .hero-grid {
@@ -185,10 +227,10 @@
     }
 
     .hero-copy h1 {
-      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      font-size: clamp(2.5rem, 5vw, 4.7rem);
       line-height: 1.02;
       margin-bottom: 18px;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.045em;
     }
 
     .hero-copy p {
@@ -196,6 +238,7 @@
       color: #444;
       max-width: 640px;
       margin-bottom: 28px;
+      line-height: 1.75;
     }
 
     .hero-ctas {
@@ -206,13 +249,23 @@
     }
 
     .hero-proof {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
       color: var(--muted);
       font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .hero-proof span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .hero-card {
-      background: rgba(255,255,255,0.88);
-      border: 1px solid rgba(255,255,255,0.85);
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.85);
       border-radius: 28px;
       padding: 26px;
       box-shadow: var(--shadow);
@@ -234,22 +287,24 @@
       width: min(100%, 440px);
       max-height: 500px;
       object-fit: contain;
-      filter: drop-shadow(0 20px 30px rgba(0,0,0,0.18));
+      filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.18));
     }
 
     .floating-quote {
       position: absolute;
       left: 18px;
       bottom: 18px;
-      background: rgba(255,255,255,0.95);
+      background: rgba(255, 255, 255, 0.95);
       color: #111;
       max-width: 270px;
       border-radius: 14px;
       padding: 14px 16px;
       font-weight: 700;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      line-height: 1.45;
     }
 
+    /* PROBLEM */
     .problem-box {
       max-width: 860px;
       margin: 0 auto;
@@ -257,7 +312,7 @@
       border: 1px solid var(--line);
       border-radius: 24px;
       padding: 32px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     }
 
     .problem-list {
@@ -277,6 +332,7 @@
       font-size: 1.05rem;
     }
 
+    /* APPROACH */
     .approach {
       background: var(--soft);
     }
@@ -294,7 +350,7 @@
       padding: 26px;
       border-radius: 16px;
       border: 1px solid var(--line);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
       text-align: left;
     }
 
@@ -315,6 +371,7 @@
       font-size: 1.02rem;
     }
 
+    /* SERVICES */
     .services {
       background: #fff;
     }
@@ -330,7 +387,13 @@
       border: 1px solid var(--line);
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
     }
 
     .service-card img {
@@ -354,64 +417,82 @@
       font-size: 0.98rem;
     }
 
+    /* CONTENT / VIDEOS */
     .content {
       background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     }
 
-    .content-grid {
+    .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-bottom: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      align-items: start;
     }
 
-    .content-card {
-      aspect-ratio: 9 / 16;
+    .video-card {
+      background: #fff;
+      border: 1px solid var(--line);
       border-radius: 20px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      color: #fff;
-      background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
-      box-shadow: var(--shadow);
-      position: relative;
       overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .content-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 20%, rgba(0,0,0,0.68) 100%);
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 30px rgba(0,0,0,0.10);
     }
 
-    .content-card > * {
-      position: relative;
-      z-index: 1;
+    .video-frame {
+      background: #0f172a;
+      padding: 12px;
     }
 
-    .content-card span {
-      font-size: 0.82rem;
-      text-transform: uppercase;
+    .video-frame video {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      border-radius: 14px;
+      background: #000;
+    }
+
+    .video-meta {
+      padding: 18px 18px 20px;
+      text-align: left;
+    }
+
+    .video-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
       letter-spacing: 0.08em;
-      opacity: 0.8;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      background: #eaf2ff;
+      padding: 7px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .video-meta h3 {
+      font-size: 1.08rem;
       margin-bottom: 8px;
+      color: var(--primary);
     }
 
-    .content-card h3 {
-      font-size: 1.15rem;
-      line-height: 1.2;
-      margin-bottom: 10px;
-    }
-
-    .content-card p {
+    .video-meta p {
       font-size: 0.95rem;
-      color: rgba(255,255,255,0.88);
+      color: var(--muted);
+      line-height: 1.65;
     }
 
+    /* FOR WHO */
     .for-who {
       background: #111827;
+      color: #fff;
+    }
+
+    .for-who .section-title {
       color: #fff;
     }
 
@@ -424,8 +505,8 @@
     }
 
     .for-who-col {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 18px;
       padding: 24px;
     }
@@ -441,7 +522,7 @@
 
     .for-who-col li {
       margin-bottom: 12px;
-      color: rgba(255,255,255,0.9);
+      color: rgba(255, 255, 255, 0.9);
     }
 
     .yes::before {
@@ -456,6 +537,7 @@
       font-weight: 800;
     }
 
+    /* ABOUT */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -477,6 +559,7 @@
       box-shadow: var(--shadow);
     }
 
+    /* CTA */
     .cta-final {
       background: var(--soft);
       text-align: center;
@@ -500,6 +583,7 @@
       margin-top: 24px;
     }
 
+    /* FOOTER */
     footer {
       background: #111;
       color: #aaa;
@@ -512,6 +596,7 @@
       color: #fff;
     }
 
+    /* MOBILE */
     @media (max-width: 900px) {
       .hero-grid,
       .about-grid {
@@ -527,12 +612,34 @@
         margin-right: auto;
       }
 
-      .hero-ctas {
+      .hero-ctas,
+      .hero-proof {
         justify-content: center;
       }
 
       .nav {
         display: none;
+        position: absolute;
+        top: 78px;
+        left: 20px;
+        right: 20px;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        padding: 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .nav.nav-open {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+        flex-direction: column;
       }
     }
 
@@ -585,17 +692,23 @@
   <header>
     <div class="container">
       <a href="#" class="brand" aria-label="Rachid Coaching Life">
-        <img src="images/logo.png" alt="Logo Rachid Coaching Life">
+        <img src="images/logo.png" alt="Logo Rachid Coaching Life" />
         <span>Rachid Coaching Life</span>
       </a>
 
-      <nav class="nav">
+      <nav class="nav" id="mainNav">
         <a href="#approach">Approche</a>
         <a href="#services">Axes</a>
         <a href="#content">Contenu</a>
         <a href="#about">À propos</a>
-        <a href="https://www.tiktok.com/@rachid_coaching_life" target="_blank">TikTok</a>
+        <a href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener">TikTok</a>
       </nav>
+
+      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" onclick="document.getElementById('mainNav').classList.toggle('nav-open')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
@@ -612,18 +725,20 @@
           </p>
 
           <div class="hero-ctas">
-            <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn" target="_blank">Voir les vidéos TikTok</a>
+            <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn" target="_blank" rel="noopener">Voir les vidéos TikTok</a>
             <a href="#approach" class="btn btn-outline">Comprendre l’approche</a>
           </div>
 
-          <p class="hero-proof">
-            Pour ceux qui veulent moins de bruit, plus de direction et des conseils réellement utiles.
-          </p>
+          <div class="hero-proof">
+            <span>✓ Conseils directs</span>
+            <span>✓ Sans blabla</span>
+            <span>✓ Applicables aujourd’hui</span>
+          </div>
         </div>
 
         <div class="hero-card">
           <div class="hero-avatar-wrap">
-            <img src="images/avatar-octogenaire.png" alt="Rachid Coaching Life — Avatar sagesse" class="hero-avatar">
+            <img src="images/avatar-octogenaire.png" alt="Rachid Coaching Life — Avatar sagesse" class="hero-avatar" />
             <div class="floating-quote">“La discipline commence quand les excuses cessent d’avoir de la valeur.”</div>
           </div>
         </div>
@@ -635,7 +750,7 @@
     <div class="container text-center">
       <h2 class="section-title">Tu as du potentiel. Mais tu stagnes.</h2>
       <p class="section-subtitle">
-        Le problème n’est pas toujours le manque de capacité. Souvent, c’est un excès de bruit, d’hésitation et de dispersion.
+        Le problème n’est pas toujours un manque de capacité. Souvent, c’est un excès de bruit, d’hésitation et de dispersion.
       </p>
 
       <div class="problem-box">
@@ -690,61 +805,89 @@
       </p>
 
       <div class="services-grid">
-  <article class="service-card">
-    <img src="images/service-brain.png" alt="Clarté mentale">
-    <div class="service-card-content">
-      <h3>Clarté mentale</h3>
-      <p>Identifier les vrais blocages, réduire le bruit et retrouver une pensée plus nette.</p>
-    </div>
-  </article>
+        <article class="service-card">
+          <img src="images/service-brain.png" alt="Clarté mentale" />
+          <div class="service-card-content">
+            <h3>Clarté mentale</h3>
+            <p>Identifier les vrais blocages, réduire le bruit et retrouver une pensée plus nette.</p>
+          </div>
+        </article>
 
-  <article class="service-card">
-    <img src="images/service-heart.png" alt="Discipline intérieure">
-    <div class="service-card-content">
-      <h3>Discipline intérieure</h3>
-      <p>Arrêter d’attendre l’envie, tenir une ligne simple et construire une stabilité plus solide.</p>
-    </div>
-  </article>
+        <article class="service-card">
+          <img src="images/service-heart.png" alt="Discipline intérieure" />
+          <div class="service-card-content">
+            <h3>Discipline intérieure</h3>
+            <p>Arrêter d’attendre l’envie, tenir une ligne simple et construire une stabilité plus solide.</p>
+          </div>
+        </article>
 
-  <article class="service-card">
-    <img src="images/mallette-service.png" alt="Conseils pratiques">
-    <div class="service-card-content">
-      <h3>Conseils pratiques</h3>
-      <p>Des pistes concrètes pour mieux avancer dans le projet pro, l’organisation et les choix du quotidien.</p>
+        <article class="service-card">
+          <img src="images/mallette-service.png" alt="Conseils pratiques" />
+          <div class="service-card-content">
+            <h3>Conseils pratiques</h3>
+            <p>Des pistes concrètes pour mieux avancer dans le projet pro, l’organisation et les choix du quotidien.</p>
+          </div>
+        </article>
+      </div>
     </div>
-  </article>
-        
-</div>
   </section>
 
   <section id="content" class="section content">
     <div class="container text-center">
       <h2 class="section-title">Contenu phare</h2>
       <p class="section-subtitle">
-        Des vidéos courtes, mais pensées pour provoquer un vrai déclic.
+        Trois vidéos courtes pour découvrir le ton, la direction et la clarté du projet.
       </p>
 
-      <div class="content-grid">
-        <div class="content-card">
-          <span>Vidéo 1</span>
-          <h3>Tu n’as pas besoin de plus de motivation.</h3>
-          <p>Tu as besoin d’une règle claire que tu respectes, même sans envie.</p>
-        </div>
+      <div class="video-grid">
+        <article class="video-card">
+          <div class="video-frame">
+            <video controls playsinline preload="metadata" poster="images/avatar-octogenaire.png">
+              <source src="vid%C3%A9os%20TikTok/l%27ennuie.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+          </div>
+          <div class="video-meta">
+            <span class="video-tag">Vidéo 1</span>
+            <h3>L’ennuie</h3>
+            <p>Une réflexion courte sur le vide, l’élan perdu et la nécessité de retrouver une direction.</p>
+          </div>
+        </article>
 
-        <div class="content-card">
-          <span>Vidéo 2</span>
-          <h3>L’impasse n’est pas toujours un mur.</h3>
-          <p>Parfois, c’est juste une porte dont tu n’as pas encore compris le code.</p>
-        </div>
+        <article class="video-card">
+          <div class="video-frame">
+            <video controls playsinline preload="metadata" poster="images/avatar-octogenaire.png">
+              <source src="vid%C3%A9os%20TikTok/l%27impasse.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+          </div>
+          <div class="video-meta">
+            <span class="video-tag">Vidéo 2</span>
+            <h3>L’impasse</h3>
+            <p>Une vidéo sur les blocages, la discipline et la manière de traverser ce qui semble fermer la route.</p>
+          </div>
+        </article>
 
-        <div class="content-card">
-          <span>Vidéo 3</span>
-          <h3>Le bruit t’épuise plus que l’effort.</h3>
-          <p>Ce qui te manque n’est pas toujours la force. Souvent, c’est la clarté.</p>
-        </div>
+        <article class="video-card">
+          <div class="video-frame">
+            <video controls playsinline preload="metadata" poster="images/avatar-octogenaire.png">
+              <source src="vid%C3%A9os%20TikTok/le%20silence.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+          </div>
+          <div class="video-meta">
+            <span class="video-tag">Vidéo 3</span>
+            <h3>Le silence</h3>
+            <p>Une prise de parole plus posée sur le recul, l’écoute intérieure et le poids du bruit autour de nous.</p>
+          </div>
+        </article>
       </div>
 
-      <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn btn-outline" target="_blank">Voir plus sur TikTok</a>
+      <div style="margin-top: 28px;">
+        <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn btn-outline" target="_blank" rel="noopener">
+          Voir plus sur TikTok
+        </a>
+      </div>
     </div>
   </section>
 
@@ -793,7 +936,7 @@
         </div>
 
         <div class="about-visual">
-          <img src="images/salon-coaching.png" alt="Salon de coaching">
+          <img src="images/salon-coaching.png" alt="Salon de coaching" />
         </div>
       </div>
     </div>
@@ -808,7 +951,7 @@
         </p>
 
         <div class="cta-buttons">
-          <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn" target="_blank">Suivre sur TikTok</a>
+          <a href="https://www.tiktok.com/@rachid_coaching_life" class="btn" target="_blank" rel="noopener">Suivre sur TikTok</a>
           <a href="mailto:rachidcoachinglife@outlook.com" class="btn btn-outline">Demander un appel découverte</a>
         </div>
 
@@ -824,7 +967,7 @@
     <div class="container">
       <p>© 2026 Rachid Coaching Life — Tous droits réservés</p>
       <p style="margin-top:8px; font-size:0.85rem;">
-        Contenu éducatif — pas un substitut à un accompagnement thérapeutique.<br>
+        Contenu éducatif — pas un substitut à un accompagnement thérapeutique.<br />
         <a href="#">Mentions légales</a> • <a href="#">Politique de confidentialité</a>
       </p>
     </div>
