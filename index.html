@@ -53,7 +53,7 @@
       text-rendering: optimizeLegibility;
     }
 
-    img, video { display: block; max-width: 100%; }
+    img, video, iframe { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; transition: opacity 0.2s ease; }
     a:hover { opacity: 0.9; }
 
@@ -383,10 +383,14 @@
       margin-bottom: 14px;
     }
 
-    .newsletter-placeholder small {
-      display: block;
-      color: var(--muted);
-      line-height: 1.6;
+    .newsletter-placeholder iframe {
+      width: 100%;
+      max-width: 420px;
+      height: 280px;
+      border-radius: 12px;
+      border: none;
+      margin: 15px auto 0;
+      background: #fff;
     }
 
     .card-box {
@@ -1135,28 +1139,15 @@
             <span>✓ Conseils concrets</span>
             <span>✓ Univers identifiable</span>
           </div>
-<div class="newsletter-placeholder">
-  <p>Reçois 1 conseil lucide par semaine</p>
 
-  <iframe 
-    src="https://a0dade5b.sibforms.com/serve/MUIFAHTZ4k3hdnjUfL_mkhw5lckBoqdprTLlECMmFdzfUTh2Au1BiO1vSknajDIhmr3iaVDHzNZpSn5SUXQlWvOcW230uOUbLGRMQMB8HNjFiDiCMt7bidQ1KWYRdtH6Y229i-KmseXeGD4f-fUy5uAusLDt_PRpwixZdcd5a7T6DHFgzMY3-3wRcvHcSDj5kiCXLcdJjPe33lAGeg==" 
-    frameborder="0" 
-    scrolling="auto" 
-    style="
-      width:100%;
-      max-width:420px;
-      height:280px;
-      border-radius:12px;
-      border:none;
-      margin-top:15px;
-    ">
-  </iframe>
-</div>
           <div class="newsletter-placeholder">
             <p>Reçois 1 conseil lucide par semaine</p>
-            <small>
-              L’emplacement est prêt. Tu pourras coller ici ton formulaire Brevo sans refaire toute la structure du site.
-            </small>
+            <iframe 
+              src="https://a0dade5b.sibforms.com/serve/MUIFAHTZ4k3hdnjUfL_mkhw5lckBoqdprTLlECMmFdzfUTh2Au1BiO1vSknajDIhmr3iaVDHzNZpSn5SUXQlWvOcW230uOUbLGRMQMB8HNjFiDiCMt7bidQ1KWYRdtH6Y229i-KmseXeGD4f-fUy5uAusLDt_PRpwixZdcd5a7T6DHFgzMY3-3wRcvHcSDj5kiCXLcdJjPe33lAGeg==" 
+              frameborder="0" 
+              scrolling="auto"
+              title="Formulaire newsletter Brevo">
+            </iframe>
           </div>
         </div>
 
