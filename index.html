@@ -7,11 +7,11 @@
   <title>Rachid Coaching Life — 80 ans de sagesse. 0 bullshit.</title>
   <meta
     name="description"
-    content="Conseils de vie lucides, directs et applicables. Rachid Coaching Life aide les jeunes adultes à retrouver clarté, discipline et direction."
+    content="Conseils de vie lucides, directs et applicables. Rachid Coaching Life aide à retrouver clarté, discipline et direction."
   />
 
   <meta property="og:title" content="Rachid Coaching Life — 80 ans de sagesse. 0 bullshit." />
-  <meta property="og:description" content="Des conseils philosophiques, directs et utiles pour retrouver clarté, discipline et direction." />
+  <meta property="og:description" content="Des conseils philosophiques directs, utiles et applicables pour retrouver clarté, discipline et direction." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rachidcoachinglife.com/" />
   <meta property="og:image" content="https://rachidcoachinglife.com/images/logo.png" />
@@ -28,15 +28,15 @@
       --bg: #fffdf8;
       --surface: #ffffff;
       --surface-soft: #f7f3ea;
-      --surface-dark: #1f2d1f;
-      --text: #182018;
-      --muted: #5d675d;
-      --line: #e8dfcf;
+      --surface-dark: #1e2a1f;
+      --text: #1a2118;
+      --muted: #5f675d;
+      --line: #e7dccb;
 
-      --green: #5c7f3a;
-      --green-dark: #3f5a28;
-      --orange: #d88a51;
-      --orange-dark: #b96f3c;
+      --green: #5f7f3d;
+      --green-dark: #42602a;
+      --orange: #d7864c;
+      --orange-dark: #b76a36;
       --cream: #f4eadb;
 
       --shadow: 0 16px 40px rgba(24, 32, 24, 0.08);
@@ -126,11 +126,11 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      min-height: 54px;
-      padding: 14px 28px;
+      min-height: 52px;
+      padding: 14px 24px;
       border-radius: 14px;
       font-weight: 800;
-      font-size: 0.96rem;
+      font-size: 0.95rem;
       border: 2px solid transparent;
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
@@ -144,7 +144,7 @@
     .btn-primary {
       background: var(--green);
       color: #fff;
-      box-shadow: 0 10px 22px rgba(92, 127, 58, 0.22);
+      box-shadow: 0 10px 22px rgba(95, 127, 61, 0.22);
     }
 
     .btn-primary:hover {
@@ -154,7 +154,7 @@
     .btn-accent {
       background: var(--orange);
       color: #fff;
-      box-shadow: 0 10px 22px rgba(216, 138, 81, 0.22);
+      box-shadow: 0 10px 22px rgba(215, 134, 76, 0.22);
     }
 
     .btn-accent:hover {
@@ -176,13 +176,13 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 253, 248, 0.94);
+      background: rgba(255, 253, 248, 0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
 
     header .container {
-      min-height: 84px;
+      min-height: 86px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -200,14 +200,28 @@
       flex-shrink: 0;
     }
 
-    .brand img {
-      height: 70px;
-      width: auto;
+    .brand-logo-circle {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #fff;
+      border: 2px solid #efe4d2;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .brand-logo-circle img {
+      width: 90%;
+      height: 90%;
       object-fit: contain;
     }
 
     .brand span {
-      font-size: 1.05rem;
+      font-size: 1.06rem;
     }
 
     .nav {
@@ -220,7 +234,7 @@
     .nav a {
       font-size: 0.94rem;
       font-weight: 700;
-      color: #3f4b3f;
+      color: #3f4a3f;
       position: relative;
       padding-bottom: 4px;
     }
@@ -262,15 +276,15 @@
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(circle at 12% 18%, rgba(92, 127, 58, 0.10), transparent 28%),
-        radial-gradient(circle at 85% 82%, rgba(216, 138, 81, 0.10), transparent 24%),
+        radial-gradient(circle at 12% 18%, rgba(95, 127, 61, 0.10), transparent 28%),
+        radial-gradient(circle at 85% 82%, rgba(215, 134, 76, 0.10), transparent 24%),
         linear-gradient(145deg, #fffdf8 0%, #f7f3ea 100%);
       padding: 108px 0 84px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.08fr 0.92fr;
       gap: 54px;
       align-items: center;
     }
@@ -290,7 +304,7 @@
     }
 
     .hero-copy h1 {
-      font-size: clamp(2.9rem, 5.8vw, 5.5rem);
+      font-size: clamp(2.9rem, 5.8vw, 5.4rem);
       line-height: 0.93;
       letter-spacing: -0.06em;
       color: var(--text);
@@ -305,7 +319,7 @@
 
     .hero-copy p {
       max-width: 620px;
-      font-size: 1.09rem;
+      font-size: 1.08rem;
       color: #4f5c4f;
       margin-bottom: 32px;
     }
@@ -331,14 +345,14 @@
       align-items: center;
       gap: 6px;
       padding: 10px 14px;
-      background: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.78);
       border: 1px solid var(--line);
       border-radius: 12px;
     }
 
     .hero-card {
-      background: rgba(255,255,255,0.85);
-      border: 1px solid rgba(255,255,255,0.95);
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(255,255,255,0.96);
       border-radius: 30px;
       padding: 18px;
       box-shadow: var(--shadow-strong);
@@ -434,7 +448,7 @@
       margin: 0 auto 44px;
       padding: 32px;
       background: #fff;
-      border: 2px solid rgba(92, 127, 58, 0.14);
+      border: 2px solid rgba(95, 127, 61, 0.14);
       border-radius: 24px;
       box-shadow: var(--shadow);
     }
@@ -494,7 +508,7 @@
       justify-content: center;
       font-weight: 900;
       font-size: 1.05rem;
-      box-shadow: 0 6px 16px rgba(92, 127, 58, 0.28);
+      box-shadow: 0 6px 16px rgba(95, 127, 61, 0.28);
     }
 
     .principle h3 {
@@ -511,7 +525,7 @@
     .services-grid,
     .video-grid,
     .future-grid,
-    .testimonials-grid {
+    .contact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
       gap: 24px;
@@ -520,7 +534,7 @@
     .service-card,
     .video-card,
     .future-card,
-    .testimonial-card {
+    .contact-card {
       background: #fff;
       border: 1px solid var(--line);
       border-radius: 24px;
@@ -532,29 +546,23 @@
     .service-card:hover,
     .video-card:hover,
     .future-card:hover,
-    .testimonial-card:hover {
+    .contact-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-strong);
-    }
-
-    .service-card img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      background: #fff;
     }
 
     .service-card-content,
     .video-meta,
     .future-card,
-    .testimonial-card {
+    .contact-card {
       padding: 24px;
       text-align: left;
     }
 
     .service-card h3,
     .video-meta h3,
-    .future-card h3 {
+    .future-card h3,
+    .contact-card h3 {
       font-size: 1.12rem;
       margin-bottom: 10px;
       color: var(--text);
@@ -563,9 +571,54 @@
     .service-card p,
     .video-meta p,
     .future-card p,
-    .testimonial-card p {
+    .contact-card p {
       color: var(--muted);
       font-size: 0.97rem;
+    }
+
+    .service-inline {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .service-icon-small {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .service-icon-small img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .mini-logo-circle {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #e7dccb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 14px;
+    }
+
+    .mini-logo-circle img {
+      width: 88%;
+      height: 88%;
+      object-fit: contain;
     }
 
     .content {
@@ -573,7 +626,7 @@
     }
 
     .video-frame {
-      background: #1f2d1f;
+      background: #1e2a1f;
       padding: 12px;
     }
 
@@ -603,6 +656,19 @@
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
+    }
+
+    .video-debug-note {
+      margin-top: 28px;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 18px;
+      background: #fff;
+      border: 1px dashed #d8c8b1;
+      border-radius: 16px;
+      color: #5a5a5a;
+      font-size: 0.94rem;
     }
 
     .for-who {
@@ -726,6 +792,49 @@
       letter-spacing: 0.06em;
       color: var(--muted);
       font-weight: 700;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface-soft);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .social-link:hover {
+      transform: translateY(-2px);
+      border-color: #d2c1a8;
+      background: #fff;
+    }
+
+    .social-link img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .social-link strong {
+      display: block;
+      font-size: 0.94rem;
+      color: var(--text);
+    }
+
+    .social-link span {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--muted);
     }
 
     .faq-list {
@@ -905,8 +1014,9 @@
         min-height: 76px;
       }
 
-      .brand img {
-        height: 56px;
+      .brand-logo-circle {
+        width: 58px;
+        height: 58px;
       }
 
       .brand span {
@@ -958,7 +1068,9 @@
   <header>
     <div class="container">
       <a href="#" class="brand" aria-label="Rachid Coaching Life">
-        <img src="images/logo.png" alt="Logo Rachid Coaching Life">
+        <div class="brand-logo-circle">
+          <img src="images/logo.png" alt="Logo Rachid Coaching Life">
+        </div>
         <span>Rachid Coaching Life</span>
       </a>
 
@@ -968,8 +1080,8 @@
         <a href="#services">Axes</a>
         <a href="#videos">Vidéos</a>
         <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
         <a href="#faq">FAQ</a>
-        <a href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener">TikTok</a>
       </nav>
 
       <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" onclick="document.getElementById('mainNav').classList.toggle('nav-open')">
@@ -1096,26 +1208,44 @@
 
       <div class="services-grid">
         <article class="service-card">
-          <img src="images/service-brain.png" alt="Clarté mentale">
           <div class="service-card-content">
-            <h3>Clarté mentale</h3>
-            <p>Identifier les vrais blocages, réduire le bruit mental et retrouver une pensée plus nette et plus utile.</p>
+            <div class="service-inline">
+              <div class="service-icon-small">
+                <img src="images/service-brain.png" alt="Icône clarté mentale">
+              </div>
+              <div>
+                <h3>Clarté mentale</h3>
+                <p>Identifier les vrais blocages, réduire le bruit mental et retrouver une pensée plus nette et plus utile.</p>
+              </div>
+            </div>
           </div>
         </article>
 
         <article class="service-card">
-          <img src="images/service-heart.png" alt="Discipline intérieure">
           <div class="service-card-content">
-            <h3>Discipline intérieure</h3>
-            <p>Arrêter d’attendre l’envie, tenir une ligne simple et construire une stabilité durable.</p>
+            <div class="service-inline">
+              <div class="service-icon-small">
+                <img src="images/service-heart.png" alt="Icône discipline intérieure">
+              </div>
+              <div>
+                <h3>Discipline intérieure</h3>
+                <p>Arrêter d’attendre l’envie, tenir une ligne simple et construire une stabilité durable.</p>
+              </div>
+            </div>
           </div>
         </article>
 
         <article class="service-card">
-          <img src="images/mallette-service.png" alt="Conseils pratiques">
           <div class="service-card-content">
-            <h3>Conseils pratiques</h3>
-            <p>Des pistes concrètes pour mieux avancer dans ton projet pro, ton organisation et tes choix du quotidien.</p>
+            <div class="service-inline">
+              <div class="service-icon-small">
+                <img src="images/mallette-service.png" alt="Icône conseils pratiques">
+              </div>
+              <div>
+                <h3>Conseils pratiques</h3>
+                <p>Des pistes concrètes pour mieux avancer dans ton projet pro, ton organisation et tes choix du quotidien.</p>
+              </div>
+            </div>
           </div>
         </article>
       </div>
@@ -1133,54 +1263,72 @@
       <div class="video-grid">
         <article class="video-card">
           <div class="video-frame">
-            <video controls playsinline preload="metadata" aria-label="Vidéo ennuie">
+            <video controls playsinline preload="metadata" aria-label="Vidéo Ennuie">
               <source src="TikTok/ennuie.mp4" type="video/mp4">
               Ton navigateur ne supporte pas la vidéo.
             </video>
           </div>
           <div class="video-meta">
+            <div class="mini-logo-circle">
+              <img src="images/logo.png" alt="Logo RCL">
+            </div>
             <span class="video-tag">Vidéo 1</span>
-            <h3>ennuie</h3>
+            <h3>Ennuie</h3>
             <p>Une réflexion sur le vide, la perte d’élan et la nécessité de retrouver une direction juste.</p>
             <div class="video-actions">
               <a class="btn btn-outline" href="TikTok/ennuie.mp4" target="_blank" rel="noopener">Ouvrir la vidéo</a>
+              <a class="btn btn-primary" href="TikTok/ennuie.mp4" download>Télécharger</a>
             </div>
           </div>
         </article>
 
         <article class="video-card">
           <div class="video-frame">
-            <video controls playsinline preload="metadata" aria-label="Vidéo impasse">
+            <video controls playsinline preload="metadata" aria-label="Vidéo Impasse">
               <source src="TikTok/impasse.mp4" type="video/mp4">
               Ton navigateur ne supporte pas la vidéo.
             </video>
           </div>
           <div class="video-meta">
+            <div class="mini-logo-circle">
+              <img src="images/logo.png" alt="Logo RCL">
+            </div>
             <span class="video-tag">Vidéo 2</span>
-            <h3>impasse</h3>
+            <h3>Impasse</h3>
             <p>Une vidéo sur les blocages, la discipline et la manière de traverser ce qui semble fermer la route.</p>
             <div class="video-actions">
               <a class="btn btn-outline" href="TikTok/impasse.mp4" target="_blank" rel="noopener">Ouvrir la vidéo</a>
+              <a class="btn btn-primary" href="TikTok/impasse.mp4" download>Télécharger</a>
             </div>
           </div>
         </article>
 
         <article class="video-card">
           <div class="video-frame">
-            <video controls playsinline preload="metadata" aria-label="Vidéo silence">
+            <video controls playsinline preload="metadata" aria-label="Vidéo Silence">
               <source src="TikTok/silence.mp4" type="video/mp4">
               Ton navigateur ne supporte pas la vidéo.
             </video>
           </div>
           <div class="video-meta">
+            <div class="mini-logo-circle">
+              <img src="images/logo.png" alt="Logo RCL">
+            </div>
             <span class="video-tag">Vidéo 3</span>
-            <h3>silence</h3>
+            <h3>Silence</h3>
             <p>Une prise de parole plus posée sur le recul, l’écoute intérieure et le poids du bruit autour de nous.</p>
             <div class="video-actions">
               <a class="btn btn-outline" href="TikTok/silence.mp4" target="_blank" rel="noopener">Ouvrir la vidéo</a>
+              <a class="btn btn-primary" href="TikTok/silence.mp4" download>Télécharger</a>
             </div>
           </div>
         </article>
+      </div>
+
+      <div class="video-debug-note">
+        Si la vidéo ne s’affiche toujours pas dans la page mais que <strong>“Ouvrir la vidéo”</strong> fonctionne,
+        alors le problème vient du lecteur intégré ou du cache. Si même <strong>“Ouvrir la vidéo”</strong> ne fonctionne pas,
+        alors le fichier MP4 n’est pas servi correctement sur le site publié.
       </div>
     </div>
   </section>
@@ -1235,8 +1383,8 @@
               <div class="stat-label">Vidéos clés</div>
             </div>
             <div class="stat">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Vision claire</div>
+              <div class="stat-number">RCL</div>
+              <div class="stat-label">Identité forte</div>
             </div>
           </div>
 
@@ -1248,6 +1396,60 @@
         <div class="about-visual">
           <img src="images/salon-coaching.png" alt="Univers visuel de Rachid Coaching Life">
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container text-center">
+      <span class="section-tag">Contact</span>
+      <h2 class="section-title">Retrouve RCL sur les réseaux</h2>
+      <p class="section-subtitle">
+        Pour suivre les contenus, observer l’évolution du projet et garder le lien avec l’univers de Rachid Coaching Life.
+      </p>
+
+      <div class="contact-grid">
+        <article class="contact-card">
+          <h3>Instagram</h3>
+          <p>Le compte principal pour suivre l’univers, les vidéos et les actualités du projet.</p>
+          <div class="social-links">
+            <a class="social-link" href="https://www.instagram.com/rachid_coaching_life" target="_blank" rel="noopener" aria-label="Instagram Rachid Coaching Life">
+              <img src="images/icons/instagram-icon.png" alt="Icône Instagram">
+              <div>
+                <strong>Instagram</strong>
+                <span>@rachid_coaching_life</span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <article class="contact-card">
+          <h3>Facebook</h3>
+          <p>Pour garder une présence plus large et centraliser le projet sur plusieurs plateformes.</p>
+          <div class="social-links">
+            <a class="social-link" href="https://www.facebook.com/rachid.coachinglife" target="_blank" rel="noopener" aria-label="Facebook Rachid Coaching Life">
+              <img src="images/icons/facebook-icon.png" alt="Icône Facebook">
+              <div>
+                <strong>Facebook</strong>
+                <span>rachid.coachinglife</span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <article class="contact-card">
+          <h3>TikTok</h3>
+          <p>Le canal principal pour faire découvrir les conseils courts, directs et philosophiques de l’octogénaire.</p>
+          <div class="social-links">
+            <a class="social-link" href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener" aria-label="TikTok Rachid Coaching Life">
+              <img src="images/icons/tiktok-icon.png" alt="Icône TikTok">
+              <div>
+                <strong>TikTok</strong>
+                <span>@rachid_coaching_life</span>
+              </div>
+            </a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -1274,33 +1476,6 @@
         <article class="future-card">
           <h3>Ressources</h3>
           <p>Pour proposer des PDF, des règles simples, des guides ou des outils complémentaires.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container text-center">
-      <span class="section-tag">Preuve sociale</span>
-      <h2 class="section-title">Espace témoignages prêt pour plus tard</h2>
-      <p class="section-subtitle">
-        Mieux vaut une section vide qu’un faux témoignage. Mais l’emplacement est déjà prévu.
-      </p>
-
-      <div class="testimonials-grid">
-        <article class="testimonial-card">
-          <p>“Ici, tu pourras ajouter plus tard un vrai retour d’expérience court, crédible et marquant.”</p>
-          <strong>— Témoignage futur</strong>
-        </article>
-
-        <article class="testimonial-card">
-          <p>“Cette section est prête pour accueillir des retours abonnés, clients ou captures de messages.”</p>
-          <strong>— Témoignage futur</strong>
-        </article>
-
-        <article class="testimonial-card">
-          <p>“Mieux vaut un site honnête sans faux avis qu’un site mensonger qui abîme la confiance.”</p>
-          <strong>— Règle de crédibilité</strong>
         </article>
       </div>
     </div>
@@ -1337,7 +1512,7 @@
 
         <article class="faq-item">
           <h3>Comment te contacter ?</h3>
-          <p>Via l’adresse mail présente sur le site, et plus tard via un espace de prise de rendez-vous ou d’appel découverte si tu décides de l’activer.</p>
+          <p>Via les réseaux sociaux, l’adresse mail présente sur le site, et plus tard via un espace de prise de rendez-vous si tu décides de l’activer.</p>
         </article>
       </div>
     </div>
