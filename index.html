@@ -11,7 +11,10 @@
   <meta property="og:description" content="Des conseils de vie lucides, philosophiques et concrets pour retrouver clarté, discipline et direction." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rachidcoachinglife.com/" />
-  <meta property="og:image" content="https://rachidcoachinglife.com/images/logo.svg" />
+  <meta property="og:image" content="https://rachidcoachinglife.com/images/og-share.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="images/favicon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,6 +25,7 @@
       --bg: #fcfbf7;
       --surface: #ffffff;
       --surface-soft: #f6f3ec;
+      --surface-dark: #1a1d29;
       --text: #1d2430;
       --muted: #647084;
       --line: #e8e3d8;
@@ -51,7 +55,8 @@
     }
 
     img, video { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
+    a { color: inherit; text-decoration: none; transition: opacity 0.2s ease; }
+    a:hover { opacity: 0.85; }
 
     .container {
       width: min(var(--container), calc(100% - 40px));
@@ -110,7 +115,10 @@
       white-space: nowrap;
     }
 
-    .btn:hover { transform: translateY(-2px); }
+    .btn:hover { 
+      transform: translateY(-2px);
+      opacity: 1;
+    }
 
     .btn-primary {
       background: var(--blue);
@@ -118,7 +126,10 @@
       box-shadow: 0 10px 22px rgba(31, 78, 163, 0.22);
     }
 
-    .btn-primary:hover { background: var(--blue-dark); }
+    .btn-primary:hover { 
+      background: var(--blue-dark);
+      box-shadow: 0 14px 28px rgba(31, 78, 163, 0.32);
+    }
 
     .btn-accent {
       background: var(--red);
@@ -126,7 +137,10 @@
       box-shadow: 0 10px 22px rgba(200, 79, 79, 0.22);
     }
 
-    .btn-accent:hover { background: var(--red-dark); }
+    .btn-accent:hover { 
+      background: var(--red-dark);
+      box-shadow: 0 14px 28px rgba(200, 79, 79, 0.32);
+    }
 
     .btn-outline {
       background: transparent;
@@ -274,6 +288,7 @@
       font-size: 1.08rem;
       color: #516072;
       margin-bottom: 32px;
+      line-height: 1.7;
     }
 
     .hero-ctas {
@@ -346,6 +361,46 @@
       box-shadow: 0 10px 28px rgba(0,0,0,0.08);
     }
 
+    .email-capture {
+      margin-top: 40px;
+      text-align: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      max-width: 560px;
+    }
+
+    .email-capture p {
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .email-form {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .email-form input {
+      min-width: 260px;
+      flex: 1 1 260px;
+      padding: 13px 14px;
+      border-radius: 12px;
+      border: 1px solid #cfd6df;
+      background: #fff;
+      font: inherit;
+      color: var(--text);
+    }
+
+    .email-form input:focus {
+      outline: 2px solid rgba(31, 78, 163, 0.15);
+      border-color: var(--blue);
+    }
+
     .card-box {
       background: #fff;
       border: 1px solid var(--line);
@@ -409,6 +464,7 @@
       font-size: 1.35rem;
       color: var(--text);
       margin-bottom: 14px;
+      font-weight: 800;
     }
 
     .avatar-explanation p {
@@ -418,8 +474,13 @@
       margin-bottom: 14px;
     }
 
+    .avatar-explanation p:last-child {
+      margin-bottom: 0;
+    }
+
     .avatar-explanation strong {
       color: var(--blue);
+      font-weight: 800;
     }
 
     .principles {
@@ -468,10 +529,12 @@
       margin-bottom: 10px;
       font-size: 1.16rem;
       color: var(--text);
+      font-weight: 800;
     }
 
     .principle p {
       color: var(--muted);
+      line-height: 1.65;
     }
 
     .services-grid,
@@ -518,6 +581,7 @@
       font-size: 1.12rem;
       margin-bottom: 10px;
       color: var(--text);
+      font-weight: 800;
     }
 
     .service-card p,
@@ -526,6 +590,7 @@
     .contact-card p {
       color: var(--muted);
       font-size: 0.97rem;
+      line-height: 1.65;
     }
 
     .service-inline {
@@ -608,6 +673,12 @@
       border-radius: 16px;
       color: #5a5a5a;
       font-size: 0.94rem;
+      text-align: center;
+    }
+
+    .video-debug-note strong {
+      color: var(--blue);
+      font-weight: 800;
     }
 
     .for-who {
@@ -617,6 +688,10 @@
 
     .for-who .section-title {
       color: #fff;
+    }
+
+    .for-who .section-subtitle {
+      color: rgba(255,255,255,0.84);
     }
 
     .for-who-grid {
@@ -644,6 +719,7 @@
       margin-bottom: 18px;
       font-size: 1.22rem;
       font-weight: 900;
+      color: #fff;
     }
 
     .for-who-col ul { list-style: none; }
@@ -689,7 +765,14 @@
       line-height: 1.75;
     }
 
-    .about-copy strong { color: var(--text); }
+    .about-copy p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .about-copy strong { 
+      color: var(--text);
+      font-weight: 800;
+    }
 
     .about-visual img {
       width: 100%;
@@ -743,18 +826,20 @@
       border-radius: 16px;
       background: var(--surface-soft);
       transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      text-decoration: none;
     }
 
     .social-link:hover {
       transform: translateY(-2px);
       border-color: #d2c1a8;
       background: #fff;
+      opacity: 1;
     }
 
-    .social-link img {
+    .social-link img,
+    .social-link svg {
       width: 24px;
       height: 24px;
-      object-fit: contain;
       flex-shrink: 0;
     }
 
@@ -762,6 +847,7 @@
       display: block;
       font-size: 0.94rem;
       color: var(--text);
+      font-weight: 800;
     }
 
     .social-link span {
@@ -790,16 +876,31 @@
       font-size: 1rem;
       color: var(--text);
       margin-bottom: 8px;
+      font-weight: 800;
     }
 
-    .faq-item p {
+    .faq-item p,
+    .faq-item span,
+    .faq-item strong {
       color: var(--muted);
-      font-size: 0.96rem;
     }
 
     .cta-final {
       background: var(--surface-soft);
       text-align: center;
+      color: var(--text);
+    }
+
+    .cta-final .section-title,
+    .cta-final .section-subtitle,
+    .cta-final .section-tag {
+      color: var(--text);
+    }
+
+    .cta-final .section-tag {
+      background: rgba(31, 78, 163, 0.08);
+      color: var(--blue);
+      border-color: rgba(31, 78, 163, 0.12);
     }
 
     .cta-card {
@@ -827,21 +928,33 @@
       border-radius: 14px;
       color: #555;
       font-size: 0.95rem;
+      line-height: 1.6;
     }
 
     .newsletter-note a {
       font-weight: 800;
       text-decoration: underline;
+      color: var(--blue);
     }
 
     footer {
-      background: #111;
+      background: #0a0a0a;
       color: #aaa;
       padding: 40px 0;
       font-size: 0.9rem;
     }
 
     footer .container { text-align: center; }
+
+    footer a { 
+      color: #fff;
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: var(--blue);
+      opacity: 1;
+    }
 
     .footer-links {
       margin-top: 16px;
@@ -850,8 +963,6 @@
       justify-content: center;
       flex-wrap: wrap;
     }
-
-    footer a { color: #fff; }
 
     .scroll-to-top {
       position: fixed;
@@ -873,6 +984,7 @@
       transition: all 0.25s ease;
       z-index: 1000;
       border: none;
+      font-weight: 900;
     }
 
     .scroll-to-top.visible {
@@ -905,10 +1017,15 @@
         justify-content: center;
       }
 
+      .email-capture {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       .nav {
         display: none;
         position: absolute;
-        top: 78px;
+        top: 88px;
         left: 20px;
         right: 20px;
         background: #fff;
@@ -965,8 +1082,17 @@
       }
 
       .card-box,
-      .cta-card {
+      .cta-card,
+      .avatar-explanation {
         padding: 24px 18px;
+      }
+
+      .email-form {
+        flex-direction: column;
+      }
+
+      .email-form input {
+        min-width: 100%;
       }
 
       .stats-row {
@@ -980,6 +1106,8 @@
       .scroll-to-top {
         right: 18px;
         bottom: 18px;
+        width: 48px;
+        height: 48px;
       }
     }
   </style>
@@ -988,7 +1116,7 @@
 
   <header>
     <div class="container">
-      <a href="#" class="brand" aria-label="Rachid Coaching Life">
+      <a href="#" class="brand" aria-label="Rachid Coaching Life - Accueil">
         <img src="images/logo.svg" alt="Logo Rachid Coaching Life">
         <span>Rachid Coaching Life</span>
       </a>
@@ -1003,7 +1131,7 @@
         <a href="#faq">FAQ</a>
       </nav>
 
-      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" onclick="document.getElementById('mainNav').classList.toggle('nav-open')">
+      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -1020,7 +1148,7 @@
           </h1>
           <p>
             Des conseils philosophiques directs, pensés pour celles et ceux qui veulent avancer
-            sans attendre l’envie parfaite. Rachid Coaching Life te parle avec recul, clarté et vérité.
+            sans attendre l'envie parfaite. Rachid Coaching Life te parle avec recul, clarté et vérité.
           </p>
 
           <div class="hero-ctas">
@@ -1033,13 +1161,21 @@
             <span>✓ Conseils concrets</span>
             <span>✓ Univers identifiable</span>
           </div>
+
+          <div class="email-capture">
+            <p>Reçois 1 conseil lucide par semaine</p>
+            <form action="#" method="post" class="email-form">
+              <input type="email" placeholder="Ton email" required>
+              <button type="submit" class="btn btn-primary">S’inscrire</button>
+            </form>
+          </div>
         </div>
 
         <div class="hero-card">
           <div class="hero-avatar-wrap">
             <img src="images/avatar-octogenaire.png" alt="Avatar octogénaire de Rachid Coaching Life" class="hero-avatar">
             <div class="floating-quote">
-              “La discipline commence quand les excuses cessent d’avoir de la valeur.”
+              "La discipline commence quand les excuses cessent d'avoir de la valeur."
             </div>
           </div>
         </div>
@@ -1051,7 +1187,7 @@
     <div class="container text-center">
       <h2 class="section-title">Tu as du potentiel. Mais tu stagnes.</h2>
       <p class="section-subtitle">
-        Le problème n’est pas toujours un manque de capacité. Souvent, c’est un excès de bruit, de dispersion et de confusion.
+        Le problème n'est pas toujours un manque de capacité. Souvent, c'est un excès de bruit, de dispersion et de confusion.
       </p>
 
       <div class="card-box">
@@ -1063,8 +1199,8 @@
 
         <div class="problem-conclusion">
           <p style="margin:0; color:#333; font-size:1.04rem;">
-            Ce n’est pas un manque de capacité.<br>
-            <strong style="color:#000;">C’est un excès de bruit.</strong><br>
+            Ce n'est pas un manque de capacité.<br>
+            <strong style="color:#000;">C'est un excès de bruit.</strong><br>
             Ici, on coupe le superflu.
           </p>
         </div>
@@ -1082,10 +1218,10 @@
 
       <div class="avatar-explanation">
         <h3>Un concept qui te différencie</h3>
-        <p>Je m’appelle Rachid. Je transmets mes messages à travers un avatar octogénaire.</p>
-        <p><strong>Pourquoi ?</strong> Parce qu’on écoute différemment une vérité quand elle semble venir d’une vie entière d’expérience.</p>
-        <p>Mon avatar n’est pas un gadget. C’est une manière de donner du poids, du recul et de la mémoire à mes conseils.</p>
-        <p style="margin:0;"><strong>80 ans de sagesse. 0 bullshit.</strong></p>
+        <p>Je m'appelle Rachid. Je transmets mes messages à travers un avatar octogénaire.</p>
+        <p><strong>Pourquoi ?</strong> Parce qu'on écoute différemment une vérité quand elle semble venir d'une vie entière d'expérience.</p>
+        <p>Mon avatar n'est pas un gadget. C'est une manière de donner du poids, du recul et de la mémoire à mes conseils.</p>
+        <p><strong>80 ans de sagesse. 0 bullshit.</strong></p>
       </div>
     </div>
   </section>
@@ -1101,7 +1237,7 @@
       <div class="principles">
         <div class="principle" data-number="1">
           <h3>Lucidité</h3>
-          <p>On nomme les vrais blocages. Pas les excuses élégantes. On regarde la réalité sans l’adoucir artificiellement.</p>
+          <p>On nomme les vrais blocages. Pas les excuses élégantes. On regarde la réalité sans l'adoucir artificiellement.</p>
         </div>
 
         <div class="principle" data-number="2">
@@ -1111,7 +1247,7 @@
 
         <div class="principle" data-number="3">
           <h3>Action immédiate</h3>
-          <p>Chaque contenu doit laisser une idée utilisable maintenant. Pas demain. Pas “plus tard”. Maintenant.</p>
+          <p>Chaque contenu doit laisser une idée utilisable maintenant. Pas demain. Pas "plus tard". Maintenant.</p>
         </div>
       </div>
     </div>
@@ -1122,7 +1258,7 @@
       <span class="section-tag">Les axes</span>
       <h2 class="section-title">Les axes du projet</h2>
       <p class="section-subtitle">
-        Trois leviers pour remettre de l’ordre, retrouver une direction et avancer avec plus de justesse.
+        Trois leviers pour remettre de l'ordre, retrouver une direction et avancer avec plus de justesse.
       </p>
 
       <div class="services-grid">
@@ -1148,7 +1284,7 @@
               </div>
               <div>
                 <h3>Discipline intérieure</h3>
-                <p>Arrêter d’attendre l’envie, tenir une ligne simple et construire une stabilité durable.</p>
+                <p>Arrêter d'attendre l'envie, tenir une ligne simple et construire une stabilité durable.</p>
               </div>
             </div>
           </div>
@@ -1174,7 +1310,7 @@
   <section id="videos" class="section content">
     <div class="container text-center">
       <span class="section-tag">Vidéos</span>
-      <h2 class="section-title">Les conseils de l’octogénaire</h2>
+      <h2 class="section-title">Les conseils de l'octogénaire</h2>
       <p class="section-subtitle">
         Voici les premières vidéos directement lisibles sur le site. Elles ne sont pas encore publiées sur TikTok, mais elles sont déjà accessibles ici.
       </p>
@@ -1191,9 +1327,11 @@
             <img class="mini-logo" src="images/logo.svg" alt="Logo RCL">
             <span class="video-tag">Vidéo 1</span>
             <h3>Ennuie</h3>
-            <p>Une réflexion sur le vide, la perte d’élan et la nécessité de retrouver une direction juste.</p>
+            <p>Une réflexion sur le vide, la perte d'élan et la nécessité de retrouver une direction juste.</p>
             <div class="video-actions">
-              <a class="btn btn-outline" href="tiktok/ennuie.mp4" target="_blank" rel="noopener">Ouvrir la vidéo</a>
+              <a class="btn btn-outline" href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener noreferrer">
+                Voir sur TikTok
+              </a>
             </div>
           </div>
         </article>
@@ -1211,7 +1349,9 @@
             <h3>Impasse</h3>
             <p>Une vidéo sur les blocages, la discipline et la manière de traverser ce qui semble fermer la route.</p>
             <div class="video-actions">
-              <a class="btn btn-outline" href="tiktok/impasse.mp4" target="_blank" rel="noopener">Ouvrir la vidéo</a>
+              <a class="btn btn-outline" href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener noreferrer">
+                Voir sur TikTok
+              </a>
             </div>
           </div>
         </article>
@@ -1227,17 +1367,18 @@
             <img class="mini-logo" src="images/logo.svg" alt="Logo RCL">
             <span class="video-tag">Vidéo 3</span>
             <h3>Silence</h3>
-            <p>Une prise de parole plus posée sur le recul, l’écoute intérieure et le poids du bruit autour de nous.</p>
+            <p>Une prise de parole plus posée sur le recul, l'écoute intérieure et le poids du bruit autour de nous.</p>
             <div class="video-actions">
-              <a class="btn btn-outline" href="tiktok/silence.mp4" target="_blank" rel="noopener">Ouvrir la vidéo</a>
+              <a class="btn btn-outline" href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener noreferrer">
+                Voir sur TikTok
+              </a>
             </div>
           </div>
         </article>
       </div>
 
       <div class="video-debug-note">
-        Si <strong>https://rachidcoachinglife.com/tiktok/impasse.mp4</strong> ne s’ouvre pas directement,
-        le problème vient du déploiement ou du serveur, pas du code HTML.
+        <strong>Note technique :</strong> Si les vidéos ne se chargent pas, vérifie que les fichiers sont bien dans le dossier <strong>/tiktok/</strong> à la racine du site.
       </div>
     </div>
   </section>
@@ -1245,8 +1386,8 @@
   <section class="section for-who">
     <div class="container">
       <h2 class="section-title text-center">Pour qui ?</h2>
-      <p class="section-subtitle text-center" style="color: rgba(255,255,255,0.84);">
-        Ce projet ne parle pas à tout le monde — et c’est voulu.
+      <p class="section-subtitle text-center">
+        Ce projet ne parle pas à tout le monde — et c'est voulu.
       </p>
 
       <div class="for-who-grid">
@@ -1263,8 +1404,8 @@
           <h3>Pas pour toi si :</h3>
           <ul>
             <li class="no">Tu cherches une solution miracle en 7 jours.</li>
-            <li class="no">Tu veux qu’on te valide sans te challenger.</li>
-            <li class="no">Tu attends d’être totalement prêt avant de commencer.</li>
+            <li class="no">Tu veux qu'on te valide sans te challenger.</li>
+            <li class="no">Tu attends d'être totalement prêt avant de commencer.</li>
           </ul>
         </div>
       </div>
@@ -1277,10 +1418,10 @@
         <div class="about-copy">
           <span class="section-tag">À propos</span>
           <h2 class="section-title">Une parole simple, utile et sans décor inutile</h2>
-          <p>Je m’appelle Rachid. <strong>Je ne suis pas un gourou.</strong></p>
-          <p>J’ai créé ce projet parce que j’en avais marre de voir des gens intelligents tourner en rond, perdre des mois à consommer du contenu sans jamais passer à l’action.</p>
+          <p>Je m'appelle Rachid. <strong>Je ne suis pas un gourou.</strong></p>
+          <p>J'ai créé ce projet parce que j'en avais marre de voir des gens intelligents tourner en rond, perdre des mois à consommer du contenu sans jamais passer à l'action.</p>
           <p>Mon outil ? Des vidéos courtes avec mon avatar octogénaire — pour te parler avec du recul, de la lucidité et de la mémoire.</p>
-          <p><strong>Mon critère : chaque mot doit servir.</strong> Le reste, c’est toi qui le construis.</p>
+          <p><strong>Mon critère : chaque mot doit servir.</strong> Le reste, c'est toi qui le construis.</p>
 
           <div class="stats-row">
             <div class="stat">
@@ -1314,16 +1455,27 @@
       <span class="section-tag">Contact</span>
       <h2 class="section-title">Retrouve RCL sur les réseaux</h2>
       <p class="section-subtitle">
-        Pour suivre les contenus, observer l’évolution du projet et garder le lien avec l’univers de Rachid Coaching Life.
+        Pour suivre les contenus, observer l'évolution du projet et garder le lien avec l'univers de Rachid Coaching Life.
       </p>
 
       <div class="contact-grid">
         <article class="contact-card">
           <h3>Instagram</h3>
-          <p>Le compte principal pour suivre l’univers, les vidéos et les actualités du projet.</p>
+          <p>Le compte principal pour suivre l'univers, les vidéos et les actualités du projet.</p>
           <div class="social-links">
-            <a class="social-link" href="https://www.instagram.com/rachid_coaching_life" target="_blank" rel="noopener" aria-label="Instagram Rachid Coaching Life">
-              <img src="images/icons/instagram-icon.png" alt="Icône Instagram">
+            <a class="social-link" href="https://www.instagram.com/rachid_coaching_life" target="_blank" rel="noopener noreferrer" aria-label="Suivre Rachid Coaching Life sur Instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="6" fill="url(#instagramGradient)"/>
+                <path d="M12 8.5C10.067 8.5 8.5 10.067 8.5 12C8.5 13.933 10.067 15.5 12 15.5C13.933 15.5 15.5 13.933 15.5 12C15.5 10.067 13.933 8.5 12 8.5Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 4H17C18.657 4 20 5.343 20 7V17C20 18.657 18.657 20 17 20H7C5.343 20 4 18.657 4 17V7C4 5.343 5.343 4 7 4ZM17.5 7.5C17.5 8.052 17.052 8.5 16.5 8.5C15.948 8.5 15.5 8.052 15.5 7.5C15.5 6.948 15.948 6.5 16.5 6.5C17.052 6.5 17.5 6.948 17.5 7.5ZM17 12C17 14.761 14.761 17 12 17C9.239 17 7 14.761 7 12C7 9.239 9.239 7 12 7C14.761 7 17 9.239 17 12Z" fill="white"/>
+                <defs>
+                  <linearGradient id="instagramGradient" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#833AB4"/>
+                    <stop offset="0.5" stop-color="#E1306C"/>
+                    <stop offset="1" stop-color="#FD1D1D"/>
+                  </linearGradient>
+                </defs>
+              </svg>
               <div>
                 <strong>Instagram</strong>
                 <span>@rachid_coaching_life</span>
@@ -1336,8 +1488,10 @@
           <h3>Facebook</h3>
           <p>Pour garder une présence plus large et centraliser le projet sur plusieurs plateformes.</p>
           <div class="social-links">
-            <a class="social-link" href="https://www.facebook.com/rachid.coachinglife" target="_blank" rel="noopener" aria-label="Facebook Rachid Coaching Life">
-              <img src="images/icons/facebook-icon.png" alt="Icône Facebook">
+            <a class="social-link" href="https://www.facebook.com/rachid.coachinglife" target="_blank" rel="noopener noreferrer" aria-label="Suivre Rachid Coaching Life sur Facebook">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 12C24 5.373 18.627 0 12 0S0 5.373 0 12c0 5.989 4.388 10.952 10.125 11.854V15.47H7.078V12h3.047V9.356c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.469h-2.796v8.385C19.612 22.952 24 17.989 24 12z"/>
+              </svg>
               <div>
                 <strong>Facebook</strong>
                 <span>rachid.coachinglife</span>
@@ -1348,10 +1502,12 @@
 
         <article class="contact-card">
           <h3>TikTok</h3>
-          <p>Le canal principal pour faire découvrir les conseils courts, directs et philosophiques de l’octogénaire.</p>
+          <p>Le canal principal pour faire découvrir les conseils courts, directs et philosophiques de l'octogénaire.</p>
           <div class="social-links">
-            <a class="social-link" href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener" aria-label="TikTok Rachid Coaching Life">
-              <img src="images/icons/tiktok-icon.png" alt="Icône TikTok">
+            <a class="social-link" href="https://www.tiktok.com/@rachid_coaching_life" target="_blank" rel="noopener noreferrer" aria-label="Suivre Rachid Coaching Life sur TikTok">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="#000000"/>
+              </svg>
               <div>
                 <strong>TikTok</strong>
                 <span>@rachid_coaching_life</span>
@@ -1379,7 +1535,7 @@
 
         <article class="future-card">
           <h3>Programme</h3>
-          <p>Pour présenter plus tard un accompagnement structuré sans refaire toute l’architecture.</p>
+          <p>Pour présenter plus tard un accompagnement structuré sans refaire toute l'architecture.</p>
         </article>
 
         <article class="future-card">
@@ -1401,16 +1557,16 @@
       <div class="faq-list">
         <article class="faq-item">
           <h3>Est-ce que Rachid Coaching Life est un vrai coaching ?</h3>
-          <p>Rachid Coaching Life propose des contenus de réflexion, de clarté et de discipline. Le site prépare aussi la possibilité d’un accompagnement plus structuré plus tard.</p>
+          <p>Rachid Coaching Life propose des contenus de réflexion, de clarté et de discipline. Le site prépare aussi la possibilité d'un accompagnement plus structuré plus tard.</p>
         </article>
 
         <article class="faq-item">
           <h3>Pourquoi utiliser un avatar de 80 ans ?</h3>
-          <p>Parce que le concept repose sur l’idée de parler avec du recul, de l’expérience et une forme de sagesse que l’on écoute différemment.</p>
+          <p>Parce que le concept repose sur l'idée de parler avec du recul, de l'expérience et une forme de sagesse que l'on écoute différemment.</p>
         </article>
 
         <article class="faq-item">
-          <h3>À qui s’adressent ces conseils ?</h3>
+          <h3>À qui s'adressent ces conseils ?</h3>
           <p>Aux personnes qui veulent plus de clarté, moins de bruit, et des paroles qui servent vraiment à avancer dans la vie et dans leurs projets.</p>
         </article>
 
@@ -1421,7 +1577,7 @@
 
         <article class="faq-item">
           <h3>Comment te contacter ?</h3>
-          <p>Via les réseaux sociaux, l’adresse mail présente sur le site, et plus tard via un espace de prise de rendez-vous si tu décides de l’activer.</p>
+          <p>Via les réseaux sociaux, l'adresse mail présente sur le site, et plus tard via un espace de prise de rendez-vous si tu décides de l'activer.</p>
         </article>
       </div>
     </div>
@@ -1431,7 +1587,7 @@
     <div class="container">
       <div class="cta-card">
         <span class="section-tag">Dernière étape</span>
-        <h2 class="section-title">Prêt à recevoir l’essentiel ?</h2>
+        <h2 class="section-title">Prêt à recevoir l'essentiel ?</h2>
         <p class="section-subtitle" style="margin-bottom:0;">
           Si tu veux moins de bruit, plus de clarté et des conseils qui servent vraiment, commence ici.
         </p>
@@ -1442,7 +1598,7 @@
         </div>
 
         <div class="newsletter-note">
-          📩 Newsletter bientôt disponible — 1 conseil lucide par semaine.<br>
+          📩 <strong>Newsletter bientôt disponible</strong> — 1 conseil lucide par semaine.<br>
           <a href="mailto:rachidcoachinglife@outlook.com?subject=Inscription Newsletter">Être prévenu du lancement</a>
         </div>
       </div>
@@ -1451,7 +1607,7 @@
 
   <footer>
     <div class="container">
-      <p><strong>© 2025 Rachid Coaching Life</strong> — Tous droits réservés</p>
+      <p><strong>© 2025–2026 Rachid Coaching Life</strong> — Tous droits réservés</p>
 
       <div class="footer-links">
         <a href="#">Mentions légales</a>
@@ -1470,6 +1626,14 @@
   <button class="scroll-to-top" id="scrollTopBtn" aria-label="Revenir en haut de la page">↑</button>
 
   <script>
+    function toggleMenu() {
+      const nav = document.getElementById("mainNav");
+      const toggle = document.querySelector(".nav-toggle");
+      const isOpen = nav.classList.contains("nav-open");
+      nav.classList.toggle("nav-open");
+      toggle.setAttribute("aria-expanded", !isOpen);
+    }
+
     const scrollBtn = document.getElementById("scrollTopBtn");
 
     window.addEventListener("scroll", function () {
@@ -1482,6 +1646,15 @@
 
     scrollBtn.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    document.querySelectorAll('.nav a').forEach(link => {
+      link.addEventListener('click', function() {
+        const nav = document.getElementById("mainNav");
+        if (nav.classList.contains("nav-open")) {
+          toggleMenu();
+        }
+      });
     });
   </script>
 </body>
