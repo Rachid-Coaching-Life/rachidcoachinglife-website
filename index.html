@@ -42,9 +42,12 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; height: 100%; }
 
     body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
       font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--text);
@@ -654,25 +657,6 @@
       flex-wrap: wrap;
     }
 
-    .video-debug-note {
-      margin-top: 28px;
-      max-width: 860px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 18px;
-      background: #fff;
-      border: 1px dashed #d8c8b1;
-      border-radius: 16px;
-      color: #5a5a5a;
-      font-size: 0.94rem;
-      text-align: center;
-    }
-
-    .video-debug-note strong {
-      color: var(--blue);
-      font-weight: 800;
-    }
-
     .for-who {
       background: var(--surface-dark);
       color: #fff;
@@ -906,23 +890,8 @@
       margin-top: 28px;
     }
 
-    .newsletter-note {
-      margin-top: 24px;
-      padding: 18px;
-      background: var(--surface-soft);
-      border-radius: 14px;
-      color: #555;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .newsletter-note a {
-      font-weight: 800;
-      text-decoration: underline;
-      color: var(--blue);
-    }
-
     footer {
+      margin-top: auto;
       background: #0a0a0a;
       color: #aaa;
       padding: 40px 0;
@@ -1189,21 +1158,21 @@
   </section>
 
   <section id="concept" class="section approach">
-  <div class="container text-center">
-    <span class="section-tag">Le ton</span>
-    <h2 class="section-title">Une voix qui te parle avec recul</h2>
-    <p class="section-subtitle">
-      Pas pour impressionner. Pas pour jouer un rôle. Pour dire les choses avec plus de vérité.
-    </p>
+    <div class="container text-center">
+      <span class="section-tag">Le ton</span>
+      <h2 class="section-title">Une voix qui te parle avec recul</h2>
+      <p class="section-subtitle">
+        Pas pour impressionner. Pas pour jouer un rôle. Pour dire les choses avec plus de vérité.
+      </p>
 
-    <div class="avatar-explanation">
-      <h3>Des conseils qu’il j'aurais aimé entendre plus tôt</h3>
-      <p>Cette voix parle avec le recul de l’expérience, des erreurs, des échecs et des prises de conscience.</p>
-      <p>Elle ne cherche pas à embellir la réalité. Elle cherche à transmettre ce qui compte vraiment quand on veut avancer, se construire et éviter de perdre des années dans le bruit.</p>
-      <p><strong>Des paroles simples, utiles, et assez honnêtes pour être entendues à 20 ans.</strong></p>
+      <div class="avatar-explanation">
+        <h3>Des conseils que j'aurais aimé entendre plus tôt</h3>
+        <p>Cette voix parle avec le recul de l’expérience, des erreurs, des échecs et des prises de conscience.</p>
+        <p>Elle ne cherche pas à embellir la réalité. Elle cherche à transmettre ce qui compte vraiment quand on veut avancer, se construire et éviter de perdre des années dans le bruit.</p>
+        <p><strong>Des paroles simples, utiles, et assez honnêtes pour être entendues à 20 ans.</strong></p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section id="approach" class="section">
     <div class="container text-center">
@@ -1415,8 +1384,8 @@
 
           <div style="margin-top: 28px;">
             <a href="https://calendly.com/rachid-coaching-life" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-  Réserver un appel découverte
-</a>
+              Réserver un appel découverte
+            </a>
           </div>
         </div>
 
@@ -1572,11 +1541,13 @@
         <div class="cta-buttons">
           <a href="#videos" class="btn btn-accent">Voir les vidéos</a>
           <a href="https://calendly.com/rachid-coaching-life" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-  Réserver un appel découverte
-</a>
+            Réserver un appel découverte
+          </a>
         </div>
       </div>
-  </section>        
+    </div>
+  </section>
+
   <footer>
     <div class="container">
       <p><strong>© 2025–2026 Rachid Coaching Life</strong> — Tous droits réservés</p>
